@@ -1,0 +1,160 @@
+.cs-ui-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: $cs-ui-text-sm;
+  font-weight: $cs-ui-font-semibold;
+  border-radius: $cs-ui-rounded-md;
+  line-height: 1.2;
+  transition: $cs-ui-transition;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  user-select: none;
+  letter-spacing: -0.15px;
+  outline: none;
+
+  &--icon-only {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none !important;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .cs-ui-btn__icon:last-child:not(:first-child),
+  .cs-ui-btn__spinner:last-child:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.cs-ui-btn--icon-left {
+  flex-direction: row-reverse;
+  .cs-ui-btn__icon:last-child:not(:first-child),
+  .cs-ui-btn__spinner:last-child:not(:first-child) {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+}
+
+.cs-ui-btn__icon,
+.cs-ui-btn__spinner,
+.cs-ui-btn__spinner-wrapper {
+  color: inherit;
+  svg {
+    color: inherit !important;
+  }
+}
+
+// width
+.cs-ui-btn--width-full {
+  width: 100% !important;
+  justify-content: center;
+}
+
+// size
+.cs-ui-btn--size-small {
+  font-size: $cs-ui-text-base;
+  padding: 4px 8px;
+  min-height: 24px;
+
+  &.cs-ui-btn--icon-only {
+    padding: 4px;
+  }
+}
+
+.cs-ui-btn--size-medium {
+  font-size: $cs-ui-text-base;
+  padding: 8px 16px;
+  min-height: 32px;
+
+  &.cs-ui-btn--icon-only {
+    padding: 8px;
+  }
+
+  &.cs-ui-btn--icon {
+    padding: 8px;
+  }
+}
+
+.cs-ui-btn--size-large {
+  font-size: $cs-ui-text-base;
+  padding: 12px 24px;
+  min-height: 40px;
+
+  &.cs-ui-btn--icon {
+    padding: 12px;
+    padding-right: 16px;
+  }
+
+  &.cs-ui-btn--icon-only {
+    padding: 12px;
+  }
+  &--icon-right {
+    padding: 12px;
+    padding-left: 16px;
+  }
+}
+
+// styles
+.cs-ui-btn--style {
+  &-primary {
+    color: $cs-ui-white;
+    background-color: $cs-ui-primary;
+
+    &:hover:not(:disabled),
+    &:active {
+      color: $cs-ui-white;
+      background-color: $cs-ui-brand-shade;
+    }
+
+    &:focus-visible {
+      color: $cs-ui-white;
+      border: 3px solid $cs-ui-shade-light;
+      box-shadow: 0px 0px 0px 0px #00000040;
+    }
+  }
+
+  &-secondary {
+    color: $cs-ui-content-darker;
+    background-color: $cs-ui-white;
+    box-shadow: 0px 2px 2px 0px #00000014;
+
+    &:hover:not(:disabled),
+    &:active {
+      background-color: $cs-ui-content-darker;
+      color: $cs-ui-white;
+    }
+
+    &:focus-visible {
+      border: 3px solid $cs-ui-shade-light;
+      box-shadow: 0px 2px 2px 0px #00000014;
+    }
+  }
+
+  &-text {
+    color: $cs-ui-content-darker;
+
+    &:hover:not(:disabled),
+    &:active {
+      background-color: $cs-ui-shade-background;
+    }
+
+    &:focus-visible {
+      color: $cs-ui-gray-800;
+      border: 3px solid $cs-ui-shade-light;
+      box-shadow: 0 0 0 3px #e5e5e5;
+    }
+  }
+}

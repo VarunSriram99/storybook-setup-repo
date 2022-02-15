@@ -1,0 +1,240 @@
+// Color palette
+
+// primary
+$cs-ui-white: #ffffff;
+$cs-ui-black: #1b1f23;
+// content
+$cs-ui-gray-800: #2f3941;
+$cs-ui-gray-700: #49545c;
+$cs-ui-gray-600: #68737d;
+$cs-ui-gray-500: #87929d;
+$cs-ui-gray-400: #c2c8cc;
+$cs-ui-gray-300: #d8dcde;
+$cs-ui-gray-200: #e9ebed;
+$cs-ui-gray-100: #f8f9f9;
+// states
+$cs-ui-success: #00ba88;
+$cs-ui-info: #276ef1;
+$cs-ui-warning: #f3cd82;
+$cs-ui-error: #f56a58;
+// pastel
+$cs-ui-pastel-blue: #eaf3fc;
+$cs-ui-pastel-green: #ebf5ec;
+$cs-ui-pastel-yellow: #fff2d7;
+$cs-ui-pastel-red: #ffefed;
+$cs-ui-pastel-teal: #98f3f4;
+// secondary
+$cs-ui-secondary-indigo: #5e5ce6;
+$cs-ui-secondary-green: #00ba88;
+$cs-ui-secondary-teal: #64d2ff;
+
+//other
+$cs-ui-landing-page-background: #e1f4f6;
+
+// cs-ui-theme-colors-map
+$cs-ui-theme-colors: (
+  // primary
+  "black": $cs-ui-black,
+  "white": $cs-ui-white,
+  // content
+  "gray-800": $cs-ui-gray-800,
+  "gray-700": $cs-ui-gray-700,
+  "gray-600": $cs-ui-gray-600,
+  "gray-500": $cs-ui-gray-500,
+  "gray-400": $cs-ui-gray-400,
+  "gray-300": $cs-ui-gray-300,
+  "gray-200": $cs-ui-gray-200,
+  "gray-100": $cs-ui-gray-100,
+  // states
+  "success": $cs-ui-success,
+  "info": $cs-ui-info,
+  "warning": $cs-ui-warning,
+  "error": $cs-ui-error,
+  // pastel
+  "pastel-blue": $cs-ui-pastel-blue,
+  "pastel-green": $cs-ui-pastel-green,
+  "pastel-yellow": $cs-ui-pastel-yellow,
+  "pastel-red": $cs-ui-pastel-red,
+  "pastel-teal": $cs-ui-pastel-teal,
+  // secondary
+  "secondary-indigo": $cs-ui-secondary-indigo,
+  "secondary-green": $cs-ui-secondary-green,
+  "secondary-teal": $cs-ui-secondary-teal
+);
+
+// Font Weights
+$cs-ui-font-thin: 100;
+$cs-ui-font-extralight: 200;
+$cs-ui-font-light: 300;
+$cs-ui-font-normal: 400;
+$cs-ui-font-medium: 500;
+$cs-ui-font-semibold: 600;
+$cs-ui-font-bold: 700;
+$cs-ui-font-extrabold: 800;
+$cs-ui-font-black: 900;
+
+// cs-ui-font-weights-map
+$cs-ui-font-weights: (
+  "thin": $cs-ui-font-thin,
+  "extralight": $cs-ui-font-extralight,
+  "light": $cs-ui-font-light,
+  "normal": $cs-ui-font-normal,
+  "medium": $cs-ui-font-medium,
+  "semibold": $cs-ui-font-semibold,
+  "bold": $cs-ui-font-bold,
+  "extrabold": $cs-ui-font-extrabold,
+  "black": $cs-ui-font-black,
+);
+
+// Font Sizes
+$cs-ui-text-xxs: 10px;
+$cs-ui-text-xs: 12px;
+$cs-ui-text-sm: 14px;
+$cs-ui-text-base: 16px;
+$cs-ui-text-lg: 18px;
+$cs-ui-text-xl: 20px;
+$cs-ui-text-2xl: 24px;
+$cs-ui-text-3xl: 32px;
+$cs-ui-text-4xl: 48px;
+
+// cs-ui-font-sizes-map
+$cs-ui-font-sizes: (
+  "h1": $cs-ui-text-3xl,
+  "h2": $cs-ui-text-2xl,
+  "h3": $cs-ui-text-xl,
+  "h4": $cs-ui-text-base,
+  "h5": $cs-ui-text-sm,
+  "h6": $cs-ui-text-xs,
+  "body1": $cs-ui-text-base,
+  "body2": $cs-ui-text-sm,
+  "body3": $cs-ui-text-xs,
+);
+
+// Line Heights
+$cs-ui-leading-none: 1;
+$cs-ui-leading-tight: 1.25;
+$cs-ui-leading-snug: 1.375;
+$cs-ui-leading-normal: 1.5;
+$cs-ui-leading-relaxed: 1.625;
+$cs-ui-leading-loose: 2;
+
+// cs-ui-line-heights-map
+$cs-ui-line-heights: (
+  "none": $cs-ui-leading-none,
+  "tight": $cs-ui-leading-tight,
+  "snug": $cs-ui-leading-snug,
+  "normal": $cs-ui-leading-normal,
+  "relaxed": $cs-ui-leading-relaxed,
+  "loose": $cs-ui-leading-loose,
+);
+
+// Text-transform
+$cs-ui-text-transform-none: none;
+$cs-ui-text-transform-capitalize: capitalize;
+$cs-ui-text-transform-uppercase: uppercase;
+$cs-ui-text-transform-lowercase: lowercase;
+$cs-ui-text-transform-fullwidth: full-width;
+$cs-ui-text-transform-inherit: inherit;
+$cs-ui-text-transform-initial: initial;
+$cs-ui-text-transform-revert: revert;
+$cs-ui-text-transform-unset: unset;
+
+// cs-ui-text-transform-map
+$cs-ui-text-transform: (
+  "none": $cs-ui-text-transform-none,
+  "capitalize": $cs-ui-text-transform-capitalize,
+  "uppercase": $cs-ui-text-transform-uppercase,
+  "lowercase": $cs-ui-text-transform-lowercase,
+  "full-width": $cs-ui-text-transform-fullwidth,
+  "inherit": $cs-ui-text-transform-inherit,
+  "initial": $cs-ui-text-transform-initial,
+  "revert": $cs-ui-text-transform-revert,
+  "unset": $cs-ui-text-transform-unset,
+);
+
+// Border Radius
+$cs-ui-rounded-none: 0;
+$cs-ui-rounded-sm: 2px;
+$cs-ui-rounded: 4px;
+$cs-ui-rounded-md: 5px;
+$cs-ui-rounded-lg: 8px;
+$cs-ui-rounded-xl: 10px;
+$cs-ui-rounded-full: 999px;
+
+// Transition
+$cs-ui-transition: all 0.3s ease-in-out;
+
+// Shadows
+$cs-ui-shadow: 0px 0px 0px 3px $cs-ui-gray-200;
+$cs-ui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Box Shadows
+$cs-ui-shadow-xs: 0px 1px 4px -1px rgba(28, 48, 74, 0.12);
+$cs-ui-shadow-s: 0px 3px 12px -1px rgba(28, 52, 84, 0.12),
+  0px 2px 4px -1px rgba(28, 55, 90, 0.08);
+$cs-ui-shadow-m: 0px 8px 24px -4px rgba(28, 50, 79, 0.12),
+  0px 2px 6px -1px rgba(28, 55, 90, 0.08);
+$cs-ui-shadow-l: 0px 12px 48px -6px rgba(28, 50, 79, 0.12),
+  0px 3px 18px -2px rgba(28, 55, 90, 0.08);
+$cs-ui-shadow-xl: 0px 18px 64px -8px rgba(28, 50, 79, 0.12),
+  0px 4px 24px -3px rgba(28, 55, 90, 0.08);
+
+// cs-ui-shadows-map
+$cs-ui-shadows: (
+  "xs": $cs-ui-shadow-xs,
+  "s": $cs-ui-shadow-s,
+  "m": $cs-ui-shadow-m,
+  "l": $cs-ui-shadow-l,
+  "xl": $cs-ui-shadow-xl,
+);
+
+// Breakpoints
+$cs-ui-mob-479: 479px;
+$cs-ui-tab-768: 768px;
+$cs-ui-tab-1024: 1024px;
+$cs-ui-desk-1200: 1200px;
+
+// Constants
+$cs-ui-pane-header-height: 56px;
+$cs-ui-pane-footer-height: 88px;
+
+$cs-ui-main-header-height: 117px;
+$cs-ui-sub-header-height: 37px;
+$cs-ui-sub-header-bottom-margin: 20px;
+$cs-ui-pagination-block-height: 88px;
+$cs-ui-table-header-height: 40px;
+
+// Z Indexes
+$cs-ui-modal-z-index: 99999;
+
+// primary
+$cs-ui-primary: #4a57c4;
+$cs-ui-brand-shade: #1585c4;
+$cs-ui-primary-light: #4a57c480;
+
+// secondary
+$cs-ui-brand-shade-secondary: #f0b517;
+
+// pastel
+$cs-ui-pastel-blue: #e8f4fd;
+$cs-ui-pastel-red: #faeaea;
+$cs-ui-pastel-orange: #fdf0e3;
+$cs-ui-pastel-green: #ebf4ec;
+
+// states
+$cs-ui-state-success: #3db461;
+$cs-ui-state-warning: #f5a700;
+$cs-ui-state-danger: #bd271e;
+
+// shades
+$cs-ui-shade-empty: #ffffff;
+$cs-ui-shade-full: #000000;
+$cs-ui-shade-background: #f7f8fc;
+$cs-ui-shade-light: #d3dae6;
+$cs-ui-shade-medium: #98a2b3;
+$cs-ui-shade-dark: #69707d;
+$cs-ui-shade-darkest: #343741;
+
+// content
+$cs-ui-content-darker: #3d404a;
