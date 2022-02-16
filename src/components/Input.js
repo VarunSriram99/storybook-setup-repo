@@ -28,6 +28,7 @@ const Input = React.forwardRef((props, ref) => {
     contentSize = null,
     required = false,
     touched = true,
+    placeholder = "",
     ...otherProps
   } = props;
 
@@ -88,6 +89,7 @@ const Input = React.forwardRef((props, ref) => {
             [helpTextId]: helpText,
           })}
           data-cy={"input-field"}
+          placeholder={placeholder}
           {...otherProps}
           onChange={onChange}
         />
@@ -183,6 +185,10 @@ Input.propTypes = {
    * To specify whether the input field is required or not.
    */
   required: PropTypes.bool,
+  /**
+   * To specify the placeholder text in the input.
+   */
+  placeholder: PropTypes.string,
 };
 
 export default Input;
