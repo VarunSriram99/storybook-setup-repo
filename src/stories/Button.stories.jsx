@@ -21,17 +21,12 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  style: 'secondary',
   label: 'Button',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const Text = Template.bind({});
+Text.args = {
+  style: 'text',
   label: 'Button',
 };
