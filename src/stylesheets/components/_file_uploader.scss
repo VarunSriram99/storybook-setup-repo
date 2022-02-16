@@ -1,0 +1,36 @@
+.cs-ui-file-uploader {
+  display: grid;
+  grid-template-areas: "hero";
+  min-height: 217px;
+  place-items: center;
+  border: 1px dashed #2276fb;
+  background-color: #e8eaff;
+
+  > * {
+    grid-area: hero;
+  }
+
+  &__content {
+    text-align: center;
+    z-index: 1;
+
+    &__helper-text {
+      margin-top: 1rem;
+    }
+
+    &__button {
+      pointer-events: none;
+    }
+  }
+
+  &__file {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    &--drag_enter {
+      filter: brightness(85%);
+    }
+  }
+}

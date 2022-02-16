@@ -1,0 +1,95 @@
+.cs-ui-pane {
+  &__backdrop {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 99998;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+  }
+  &__wrapper {
+    overflow-y: auto;
+    width: 560px;
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: max-content($cs-ui-pane-header-height) auto max-content(
+        $cs-ui-pane-footer-height
+      );
+    background-color: $cs-ui-white;
+
+    @include viewport(tab-min) {
+      width: 50%;
+    }
+
+    @include viewport(mob) {
+      width: 100%;
+    }
+
+    &--xs {
+      width: 320px;
+    }
+
+    &--sm {
+      width: 480px;
+    }
+
+    &--md {
+      width: 560px;
+    }
+
+    &--lg {
+      width: 720px;
+    }
+
+    &--xl {
+      width: 50vw;
+    }
+
+    &.cs-ui-pane__wrapper--has-footer {
+      grid-template-rows: 10px $cs-ui-pane-header-height auto $cs-ui-pane-footer-height;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  &__header {
+    width: 100%;
+    padding: 24px;
+    padding-right: 60px;
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: $cs-ui-text-sm;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__footer {
+    width: 100%;
+    padding: 24px;
+    background-color: $cs-ui-white;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+
+    &.cs-ui-pane__footer__absolute {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

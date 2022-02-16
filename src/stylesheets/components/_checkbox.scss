@@ -1,0 +1,103 @@
+.cs-ui-checkbox__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  .cs-ui-checkbox__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .cs-ui-label {
+      margin-left: 12px;
+    }
+
+    .cs-ui-checkbox[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      color: $cs-ui-primary;
+      border: 2px solid $cs-ui-shade-medium;
+      border-radius: $cs-ui-rounded-sm;
+
+      &:not(:disabled) {
+        cursor: pointer;
+      }
+
+      &:hover:not(:disabled, :checked) {
+        border-color: $cs-ui-shade-dark;
+      }
+
+      &:hover:not(:disabled):is(:checked) {
+        color: $cs-ui-brand-shade;
+      }
+
+      &:checked {
+        border: none !important;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: transparent;
+      }
+
+      &:focus-visible {
+        box-shadow: 0px 0px 0px 2px #e5e5e5;
+        border: 2px solid $cs-ui-shade-medium;
+      }
+    }
+  }
+}
+
+// ant design checkbox override
+
+.ant-checkbox {
+  [type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    color: $cs-ui-primary !important;
+    border: 2px solid $cs-ui-shade-medium;
+    border-radius: $cs-ui-rounded-sm;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:hover:not(:disabled, :checked) {
+      border-color: $cs-ui-shade-dark;
+    }
+
+    &:hover:not(:disabled):is(:checked) {
+      color: $cs-ui-brand-shade;
+    }
+
+    &:checked {
+      border: none !important;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: transparent;
+    }
+
+    &:focus-visible {
+      box-shadow: 0px 0px 0px 2px #e5e5e5;
+      border: 2px solid $cs-ui-shade-medium;
+    }
+  }
+  .ant-checkbox-inner {
+    display: none;
+  }
+}

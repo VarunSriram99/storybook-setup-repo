@@ -1,0 +1,109 @@
+.cs-ui-radio__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  .cs-ui-radio__label {
+    margin-bottom: 12px;
+  }
+
+  .cs-ui-radio-input__error {
+    margin-top: 4px;
+    color: $cs-ui-error;
+    font-size: $cs-ui-text-xs;
+    display: flex;
+    align-items: center;
+    gap: 2px
+  }
+  .cs-ui-radio-input__success {
+    margin-top: 4px;
+    color: $cs-ui-success;
+    font-size: $cs-ui-text-xs;
+    display: flex;
+    align-items: center;
+    gap: 2px
+  }
+}
+
+.cs-ui-radio__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .cs-ui-radio__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .cs-ui-label {
+      margin-left: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  .cs-ui-radio[type="radio"] {
+    width: 16px;
+    height: 16px;
+    color: $cs-ui-primary;
+    border: 2px solid $cs-ui-shade-medium;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:hover:not(:disabled, :checked) {
+      border-color: $cs-ui-shade-dark;
+    }
+    &:hover:not(:disabled) {
+      color: $cs-ui-brand-shade;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:checked {
+      border: none !important;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: transparent;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $cs-ui-white, 0 0 0 4px $cs-ui-gray-300;
+    }
+  }
+
+  &.cs-ui-radio__container--error {
+    .cs-ui-radio[type="radio"] {
+      border-color: $cs-ui-error;
+    }
+  }
+
+  &.cs-ui-radio__container--success {
+    .cs-ui-radio[type="radio"] {
+      border-color: $cs-ui-success;
+    }
+  }
+
+  &.cs-ui-radio__container--stacked {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .cs-ui-radio__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

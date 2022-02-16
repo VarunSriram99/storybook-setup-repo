@@ -1,0 +1,28 @@
+.cs-ui-search-bar__input {
+  flex-basis: 30%;
+  border-radius: $cs-ui-rounded-md;
+
+  .cs-ui-input {
+    background-color: $cs-ui-shade-light !important;
+    height: 100%;
+
+    input::placeholder {
+      color: $cs-ui-shade-medium !important;
+    }
+  }
+}
+
+.cs-ui-search-bar__input__prefix {
+  padding-left: 0.75rem;
+  cursor: pointer;
+  color: $cs-ui-shade-dark;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--secondary {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import { Success, Error } from "icons";
+import { Success, Error } from "../icons";
 
 import Label from "./Label";
 import Typography from "./Typography";
 
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 
 const INPUT_SIZES = ["small", "large"];
 

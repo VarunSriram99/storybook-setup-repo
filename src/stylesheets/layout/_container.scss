@@ -1,0 +1,22 @@
+.cs-ui-container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    background-color: #f7f8fc;
+  }
+
+  &__table {
+    height: 100%;
+    padding-left: 32px;
+  }
+}
+
+.cs-ui-container__filter {
+  width: 624px;
+  padding: 24px;
+}

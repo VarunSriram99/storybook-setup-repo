@@ -1,0 +1,77 @@
+.cs-ui-typography {
+  color: $cs-ui-shade-darkest;
+  font-weight: $cs-ui-font-normal;
+}
+.cs-ui-text {
+  &-h1 {
+    line-height: 56px;
+    font-size: 40px;
+  }
+  &-h2 {
+    line-height: 48px;
+    font-size: 32px;
+  }
+  &-h3 {
+    line-height: 32px;
+    font-size: 21px;
+  }
+  &-h4 {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  &-h5 {
+    line-height: 20px;
+    font-size: 14px;
+  }
+  &-h6 {
+    line-height: 16px;
+    font-size: 12px;
+  }
+  &-jumbo {
+    line-height: 64px;
+    font-size: 56px;
+  }
+  &-x-large {
+    line-height: 32px;
+    font-size: 21px;
+  }
+  &-large {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  &-medium {
+    line-height: 20px;
+    font-size: 14px;
+  }
+  &-small {
+    line-height: 16px;
+    font-size: 12px;
+  }
+  &-condensed-large {
+    line-height: 16px;
+    font-size: 16px;
+  }
+  &-condensed-medium {
+    line-height: 16px;
+    font-size: 14px;
+  }
+  &-bold {
+    font-weight: $cs-ui-font-bold;
+  }
+  &-semibold {
+    font-weight: $cs-ui-font-semibold;
+  }
+  &-regular {
+    font-weight: $cs-ui-font-normal;
+  }
+  &-bold-uppercase {
+    font-weight: $cs-ui-font-bold;
+    text-transform: $cs-ui-text-transform-uppercase;
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+  &-uppercase {
+    text-transform: $cs-ui-text-transform-uppercase;
+  }
+}
