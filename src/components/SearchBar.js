@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Input } from "clearsense-ui/components";
+import Input from "./Input";
 import classnames from "classnames";
 import PropTypes from "prop-types";
-import { Search } from "icons";
+import { Search } from "../icons";
 
 const SearchBar = ({
   placeholder = "Search",

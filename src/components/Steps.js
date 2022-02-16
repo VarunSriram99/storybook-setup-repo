@@ -1,9 +1,9 @@
 import React from "react";
 
 import classNames from "classnames";
-import { Tooltip } from "neetoui";
+import Tooltip from "./Tooltip";
 
-import { Check } from "icons";
+import { Check } from "../icons";
 
 const Steps = ({ steps, currentStep, style = "primary", className }) => {
   return (

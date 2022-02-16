@@ -4,7 +4,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 
 import Label from "./Label";
 

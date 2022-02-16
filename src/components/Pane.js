@@ -9,7 +9,7 @@ import { Close } from "icons";
 import Button from "./Button";
 import { Portal, Backdrop } from "../atoms";
 
-import { useOnClickOutside } from "utils/useOnClickOutside";
+import { useOnClickOutside } from "../utils/useOnClickOutside";
 
 import {
   PANE_SIZE,

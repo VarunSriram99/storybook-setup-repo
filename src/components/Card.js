@@ -3,7 +3,7 @@ import React from "react";
 import classnames from "classnames";
 
 import Typography from "./Typography";
-import { RightArrow } from "icons";
+import { RightArrow } from "../icons";
 
 const noop = () => {};
 

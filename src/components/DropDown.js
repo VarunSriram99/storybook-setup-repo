@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { usePopper } from "react-popper";
-import { Down, Plus } from "@bigbinary/neeto-icons";
+import { DownArrow } from "../icons";
 import { useHotkeys } from "react-hotkeys-hook";
 import OutsideClickHandler from "react-outside-click-handler";
 
 import Button from "./Button";
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 
 const noop = () => {};
 const DROPDOWN_BTN_STYLES = {
@@ -157,7 +157,7 @@ const Dropdown = ({
               className="cs-ui-dropdown__button-group__icon"
               disabled={disabled || buttonProps?.disabled}
               style={buttonStyle}
-              icon={Down}
+              icon={DownArrow}
               {...buttonProps}
             />
           </div>

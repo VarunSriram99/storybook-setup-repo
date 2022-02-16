@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useDropzone } from "react-dropzone";
-import { Plus } from "icons";
+import { Plus } from "../icons";
 import DropDown from "./DropDown";
 import Typography from "./Typography";
 import PropTypes from "prop-types";

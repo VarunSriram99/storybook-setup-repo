@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 import Label from "./Label";
-import { Check, Close } from "icons";
+import { Check, Close } from "../icons";
 
 const Switch = ({
   label = "",

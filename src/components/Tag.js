@@ -3,9 +3,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { Close } from "icons";
+import { Close } from "../icons";
 
-import findContrast from "utils/findContrast";
+import findContrast from "../utils/findContrast";
 
 const sizes = { small: "small", large: "large" };
 
