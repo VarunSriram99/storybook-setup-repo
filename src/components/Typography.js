@@ -124,6 +124,7 @@ const Typography = React.forwardRef(
 
 Typography.propTypes = {
   style: PropTypes.oneOf(Object.values(STYLES)),
+  type: PropTypes.oneOf(Object.values(TYPES)),
   component: PropTypes.oneOf(Object.values(COMPONENTS)),
   otherProps: PropTypes.object,
 };
