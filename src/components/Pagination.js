@@ -1,9 +1,10 @@
 import React from "react";
 
 import classnames from "classnames";
+import PropTypes from "prop-types";
 
-import { Select } from "neetoui";
-import { LeftMinimalArrow, RightMinimalArrow } from "icons";
+import { Select } from "@bigbinary/neetoui";
+import { LeftMinimalArrow, RightMinimalArrow } from "../icons";
 
 import Button from "./Button";
 import Typography from "./Typography";
@@ -118,6 +119,16 @@ const Pagination = ({
       </div>
     </div>
   );
+};
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number,
+  setCurrentPage: PropTypes.func,
+  totalRecordsCount: PropTypes.number,
+  pageSize: PropTypes.number,
+  showResultsPerPage: PropTypes.bool,
+  setPageSize: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default Pagination;
