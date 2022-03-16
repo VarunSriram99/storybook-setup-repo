@@ -1,7 +1,5 @@
 .cs-ui-pane {
   &__backdrop {
-    display: flex;
-    justify-content: flex-end;
     position: fixed;
     z-index: 99998;
     left: 0;
@@ -81,7 +79,7 @@
     width: 100%;
     padding: 24px;
     background-color: $cs-ui-white;
-    border-top: 1px solid black;
+    border-top: 1px solid $cs-ui-shade-light;
     display: flex;
     align-items: center;
 

@@ -12,6 +12,12 @@
   }
 }
 
+.cs-ui-search-bar__input--secondary {
+  .cs-ui-input {
+    background-color: $cs-ui-shade-background !important; 
+  }
+}
+
 .cs-ui-search-bar__input__prefix {
   padding-left: 0.75rem;
   cursor: pointer;

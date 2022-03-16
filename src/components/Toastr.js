@@ -2,8 +2,7 @@ import React from "react";
 import { join } from "ramda";
 import Linkify from "react-linkify";
 import { toast, Slide } from "react-toastify";
-import { CloseCircle } from "@bigbinary/neeto-icons"; // Icons missing in icons library
-import { Success, Warning, Info, Close } from "../icons";
+import { Success, Warning, Info, Close, CloseCircle } from '../assets/icons';
 
 const noop = () => {};
 

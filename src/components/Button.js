@@ -10,6 +10,7 @@ const noop = () => {};
 const BUTTON_STYLES = {
   primary: "primary",
   secondary: "secondary",
+  danger: "danger",
   text: "text",
 };
 const BUTTON_SIZES = { large: "large", medium: "medium", small: "small" };
@@ -17,7 +18,7 @@ const ICON_POSITIONS = { left: "left", right: "right" };
 const BUTTON_TYPES = { button: "button", reset: "reset", submit: "submit" };
 
 const Button = React.forwardRef((props, ref) => {
-  let {
+  const {
     icon = null,
     iconPosition = "left",
     iconSize = 16,
@@ -55,13 +56,13 @@ const Button = React.forwardRef((props, ref) => {
     };
   }
 
-  let Icon =
+  const Icon =
     typeof icon == "string"
       ? () => <i className={classnames("cs-ui-btn__icon", [icon])} />
       : icon || React.Fragment;
 
   const spinnerMarginSide =
-    iconPosition == "left" ? "marginRight" : "marginLeft";
+    iconPosition === "left" ? "marginRight" : "marginLeft";
 
   return (
     <span className="inline-block">
@@ -71,15 +72,17 @@ const Button = React.forwardRef((props, ref) => {
         className={classnames("cs-ui-btn", [className], {
           "cs-ui-btn--style-primary": style === BUTTON_STYLES.primary,
           "cs-ui-btn--style-secondary": style === BUTTON_STYLES.secondary,
+          "cs-ui-btn--style-danger": style === BUTTON_STYLES.danger,
           "cs-ui-btn--style-text": style === BUTTON_STYLES.text,
           "cs-ui-btn--size-large": size === BUTTON_SIZES.large,
           "cs-ui-btn--size-medium": size === BUTTON_SIZES.medium,
           "cs-ui-btn--size-small": size === BUTTON_SIZES.small,
           "cs-ui-btn--width-full": fullWidth,
           "cs-ui-btn--icon": icon,
-          "cs-ui-btn--icon-left": iconPosition == ICON_POSITIONS.left,
+          "cs-ui-btn--icon-left": iconPosition === ICON_POSITIONS.left,
           "cs-ui-btn--size-large--icon-right":
-            size === BUTTON_SIZES.large && iconPosition == ICON_POSITIONS.right,
+            size === BUTTON_SIZES.large &&
+            iconPosition === ICON_POSITIONS.right,
           "cs-ui-btn--icon-only": !label,
           disabled: disabled,
         })}
@@ -156,11 +159,11 @@ Button.propTypes = {
    */
   to: PropTypes.string,
   /**
-   * Specify an exernal link to which the button points to.
+   * Specify an external link to which the button points to.
    */
   href: PropTypes.string,
   /**
-   * Sepcify the type of button.
+   * Specify the type of button.
    */
   type: PropTypes.oneOf(Object.values(BUTTON_TYPES)),
   /**

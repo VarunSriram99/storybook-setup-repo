@@ -3,7 +3,7 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
-import { Select } from "@bigbinary/neetoui";
+import Select from "./Select";
 import { LeftMinimalArrow, RightMinimalArrow } from "../icons";
 
 import Button from "./Button";

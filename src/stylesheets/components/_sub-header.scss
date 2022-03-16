@@ -1,0 +1,31 @@
+.cs-ui-sub-header {
+  display: flex;
+  justify-content: space-between;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &__icon {
+      color: $cs-ui-shade-medium;
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+      &__text {
+        display: flex;
+        align-items: center;
+        color: $cs-ui-shade-dark;
+        font-weight: $cs-ui-font-semibold;
+      }
+    }
+  }
+
+  &__active {
+    line-height: 1.5;
+    font-weight: $cs-ui-font-semibold;
+    color: $cs-ui-content-darker;
+  }
+}

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { usePopper } from "react-popper";
-import { DownArrow } from "../icons";
 import { useHotkeys } from "react-hotkeys-hook";
-import OutsideClickHandler from "react-outside-click-handler";
 
-import Button from "./Button";
-import hyphenize from "../utils/hyphenize";
+import { DownMinimalArrow } from '../assets/icons';
+import { Button } from "clearsense-ui/components";
+
+import {useOnClickOutside} from "../utils/useOnClickOutside";
 
 const noop = () => {};
 const DROPDOWN_BTN_STYLES = {
@@ -94,7 +94,9 @@ const Dropdown = ({
     setVisibility(!visible);
   };
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   closeOnEsc && useHotkeys("esc", onPopupClose);
+
 
   if (!isControlled) {
     buttonProps = {
@@ -117,70 +119,66 @@ const Dropdown = ({
     isControlled && setVisibility(isOpen);
   }, [isOpen]);
 
+  const dropdownRef = useRef();
+
+  useOnClickOutside(dropdownRef, closeOnOutsideClick && onPopupClose);
+
   return (
-    <OutsideClickHandler
-      useCapture={true}
-      onOutsideClick={() => {
-        closeOnOutsideClick && onPopupClose();
-      }}
+    <div
+      className={classnames("cs-ui-dropdown__wrapper", {
+        "cs-ui-dropdown__wrapper--auto-width": autoWidth,
+        [className]: className,
+      })}
+      ref={dropdownRef}
+      {...otherProps}
+      {...hoverHandlers}
     >
-      <div
-        className={classnames("cs-ui-dropdown__wrapper", {
-          "cs-ui-dropdown__wrapper--auto-width": autoWidth,
-          [className]: className,
-        })}
-        {...otherProps}
-        {...hoverHandlers}
-      >
-        {customTarget ? (
-          <div ref={setReference} onClick={handleButtonClick}>
-            <Target />
-          </div>
-        ) : (
-          <div className="cs-ui-dropdown__button-group">
-            <Button
-              label={label}
-              style={buttonStyle}
-              icon={icon}
-              iconPosition="left"
-              disabled={disabled || buttonProps?.disabled}
-              data-cy={`${hyphenize(label)}-dropdown-icon`}
-              className={classnames(
-                "cs-ui-dropdown__button-group__primary",
-                primaryButtonClass
-              )}
-              {...buttonProps}
-              onClick={primaryAction}
-            />
-            <Button
-              ref={setReference}
-              className="cs-ui-dropdown__button-group__icon"
-              disabled={disabled || buttonProps?.disabled}
-              style={buttonStyle}
-              icon={DownArrow}
-              {...buttonProps}
-            />
-          </div>
-        )}
-        {visible && (
-          <ul
-            className="cs-ui-dropdown__popup"
-            ref={setPopper}
-            onClick={handlePopperClick}
-            data-cy={`${hyphenize(label)}-dropdown-container`}
-            {...ulProps}
-            style={{
-              display: "block",
-              ...styles.offset,
-              ...styles.popper,
-            }}
-            {...attributes.popper}
-          >
-            {children}
-          </ul>
-        )}
-      </div>
-    </OutsideClickHandler>
+      {customTarget ? (
+        <div ref={setReference} onClick={handleButtonClick}>
+          <Target />
+        </div>
+      ) : (
+        <div className="cs-ui-dropdown__button-group">
+          <Button
+            label={label}
+            style={buttonStyle}
+            icon={icon}
+            iconPosition="left"
+            disabled={disabled || buttonProps?.disabled}
+            className={classnames(
+              "cs-ui-dropdown__button-group__primary",
+              primaryButtonClass
+            )}
+            {...buttonProps}
+            onClick={primaryAction}
+          />
+          <Button
+            ref={setReference}
+            className="cs-ui-dropdown__button-group__icon"
+            disabled={disabled || buttonProps?.disabled}
+            style={buttonStyle}
+            icon={DownMinimalArrow}
+            {...buttonProps}
+          />
+        </div>
+      )}
+      {visible && (
+        <ul
+          className="cs-ui-dropdown__popup"
+          ref={setPopper}
+          onClick={handlePopperClick}
+          {...ulProps}
+          style={{
+            display: "block",
+            ...styles.offset,
+            ...styles.popper,
+          }}
+          {...attributes.popper}
+        >
+          {children}
+        </ul>
+      )}
+    </div>
   );
 };
 

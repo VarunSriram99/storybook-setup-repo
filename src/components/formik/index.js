@@ -1,6 +1,5 @@
 import Input from "./Input";
 import Textarea from "./Textarea";
-import Switch from "./Switch";
-import Radio from "./Radio";
+import Select from "./Select";
 
-export { Input, Switch, Textarea, Radio };
+export { Input, Textarea, Select };

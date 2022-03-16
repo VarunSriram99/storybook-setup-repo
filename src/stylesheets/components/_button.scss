@@ -143,6 +143,22 @@
     }
   }
 
+  &-danger {
+    color: $cs-ui-error;
+    background-color: $cs-ui-pastel-red;
+
+    &:hover:not(:disabled),
+    &:active {
+      color: $cs-ui-error;
+      background-color: darken($cs-ui-pastel-red, 2.5%);
+    }
+
+    &:focus-visible {
+      color: $cs-ui-error;
+      box-shadow: 0 0 0 3px darken($cs-ui-pastel-red, 2.5%);
+    }
+  }
+
   &-text {
     color: $cs-ui-content-darker;
 

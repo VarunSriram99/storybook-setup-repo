@@ -21,12 +21,19 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  label: 'Secondary',
   style: 'secondary',
-  label: 'Button',
+  loading: true,
 };
 
 export const Text = Template.bind({});
 Text.args = {
-  style: 'text',
   label: 'Button',
+  style: 'text'
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  label: 'Button',
+  style: 'danger'
 };
