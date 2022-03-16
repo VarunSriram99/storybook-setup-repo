@@ -31,37 +31,6 @@ $cs-ui-secondary-teal: #64d2ff;
 //other
 $cs-ui-landing-page-background: #e1f4f6;
 
-// cs-ui-theme-colors-map
-$cs-ui-theme-colors: (
-  // primary
-  "black": $cs-ui-black,
-  "white": $cs-ui-white,
-  // content
-  "gray-800": $cs-ui-gray-800,
-  "gray-700": $cs-ui-gray-700,
-  "gray-600": $cs-ui-gray-600,
-  "gray-500": $cs-ui-gray-500,
-  "gray-400": $cs-ui-gray-400,
-  "gray-300": $cs-ui-gray-300,
-  "gray-200": $cs-ui-gray-200,
-  "gray-100": $cs-ui-gray-100,
-  // states
-  "success": $cs-ui-success,
-  "info": $cs-ui-info,
-  "warning": $cs-ui-warning,
-  "error": $cs-ui-error,
-  // pastel
-  "pastel-blue": $cs-ui-pastel-blue,
-  "pastel-green": $cs-ui-pastel-green,
-  "pastel-yellow": $cs-ui-pastel-yellow,
-  "pastel-red": $cs-ui-pastel-red,
-  "pastel-teal": $cs-ui-pastel-teal,
-  // secondary
-  "secondary-indigo": $cs-ui-secondary-indigo,
-  "secondary-green": $cs-ui-secondary-green,
-  "secondary-teal": $cs-ui-secondary-teal
-);
-
 // Font Weights
 $cs-ui-font-thin: 100;
 $cs-ui-font-extralight: 200;
@@ -208,6 +177,8 @@ $cs-ui-table-header-height: 40px;
 // Z Indexes
 $cs-ui-modal-z-index: 99999;
 
+$cs-ui-white: #ffffff;
+
 // primary
 $cs-ui-primary: #4a57c4;
 $cs-ui-brand-shade: #1585c4;
@@ -238,3 +209,36 @@ $cs-ui-shade-darkest: #343741;
 
 // content
 $cs-ui-content-darker: #3d404a;
+$cs-ui-content-dark: #69707d;
+
+// Magic Numbers
+$cs-ui-header-height: 72px;
+
+// cs-ui-theme-colors-map
+$cs-ui-theme-colors: (
+  // primary
+  "primary": $cs-ui-primary,
+  "brand-shade": $cs-ui-brand-shade,
+  "primary-light": $cs-ui-primary-light,
+  // secondary
+  "brand-shade-secondary": $cs-ui-brand-shade-secondary,
+  // pastes,
+  "pastel-blue": $cs-ui-pastel-blue,
+  "pastel-red": $cs-ui-pastel-red,
+  "pastel-orange": $cs-ui-pastel-orange,
+  "pastel-green": $cs-ui-pastel-green,
+  // states,
+  "state-success": $cs-ui-state-success,
+  "state-warning": $cs-ui-state-warning,
+  "state-danger": $cs-ui-state-danger,
+  // shades,
+  "shade-empty": $cs-ui-shade-empty,
+  "shade-full": $cs-ui-shade-full,
+  "shade-background": $cs-ui-shade-background,
+  "shade-light": $cs-ui-shade-light,
+  "shade-medium": $cs-ui-shade-medium,
+  "shade-dark": $cs-ui-shade-dark,
+  "shade-darkest": $cs-ui-shade-darkest,
+  // content,
+  "content-darker": $cs-ui-content-darker
+);

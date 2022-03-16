@@ -4,11 +4,11 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
-import hyphenize from "../utils/hyphenize";
+import hyphenize from "utils/hyphenize";
 
 import Label from "./Label";
 import Typography from "./Typography";
-import { Success, Error } from "../icons";
+import { Success, Error } from '../assets/icons';
 
 const Textarea = props => {
   const {
@@ -22,9 +22,9 @@ const Textarea = props => {
     successMessage,
     touched,
     nakedTextarea = false,
+    maxLength,
     ...otherProps
   } = props;
-  const { maxLength } = props;
 
   const [valueInternal, setValueInternal] = useState("");
   const onChangeInternal = e => setValueInternal(e.target.value);
@@ -47,7 +47,10 @@ const Textarea = props => {
   }, [value]);
 
   return (
-    <div className={classnames(["cs-ui-input__wrapper", className])}>
+    <div
+      className={classnames(["cs-ui-input__wrapper", className])}
+      data-testid="textarea"
+    >
       <div className="cs-ui-input__label-wrapper">
         {label && (
           <Label
@@ -59,7 +62,7 @@ const Textarea = props => {
           </Label>
         )}
         {maxLength && (
-          <Typography className="cs-ui-input__max-length" style="body3">
+          <Typography className="cs-ui-input__max-length" style="medium">
             {valueLength} / {maxLength}
           </Typography>
         )}
@@ -114,7 +117,7 @@ Textarea.propTypes = {
   rows: PropTypes.number,
   label: PropTypes.string,
   value: PropTypes.string,
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   required: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,

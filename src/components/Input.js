@@ -3,12 +3,10 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import { Success, Error } from "../icons";
+import { Success, Error } from '../assets/icons';
 
 import Label from "./Label";
 import Typography from "./Typography";
-
-import hyphenize from "../utils/hyphenize";
 
 const INPUT_SIZES = ["small", "large"];
 
@@ -28,7 +26,6 @@ const Input = React.forwardRef((props, ref) => {
     contentSize = null,
     required = false,
     touched = true,
-    placeholder = "",
     ...otherProps
   } = props;
 
@@ -51,16 +48,12 @@ const Input = React.forwardRef((props, ref) => {
     <div className={classnames(["cs-ui-input__wrapper", className])}>
       <div className="cs-ui-input__label-wrapper">
         {label && (
-          <Label
-            required={required}
-            data-cy={`${hyphenize(label)}-input-label`}
-            htmlFor={id}
-          >
+          <Label required={required} htmlFor={id}>
             {label}
           </Label>
         )}
         {maxLength && (
-          <Typography className="cs-ui-input__max-length" style="body3">
+          <Typography className="cs-ui-input__max-length" style="small">
             {valueLength} / {maxLength}
           </Typography>
         )}
@@ -89,28 +82,19 @@ const Input = React.forwardRef((props, ref) => {
             [helpTextId]: helpText,
           })}
           data-cy={"input-field"}
-          placeholder={placeholder}
           {...otherProps}
           onChange={onChange}
         />
         {suffix && <div className="cs-ui-input__suffix">{suffix}</div>}
       </div>
       {!!error && (
-        <p
-          data-cy={`${hyphenize(label)}-input-error`}
-          className="cs-ui-input__error"
-          id={errorId}
-        >
+        <p className="cs-ui-input__error" id={errorId}>
           <Error size={15} />
           {error}
         </p>
       )}
       {touched && !error && !!successMessage && (
-        <p
-          data-cy={`${hyphenize(label)}-input-error`}
-          className="cs-ui-input__success"
-          id={errorId}
-        >
+        <p className="cs-ui-input__success" id={errorId}>
           <Success size={15} />
           {successMessage}
         </p>
@@ -148,7 +132,7 @@ Input.propTypes = {
   /**
    * To specify the text to be displayed for error message.
    */
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   /**
    * To specify the text to be displayed the success message.
    */
@@ -185,10 +169,6 @@ Input.propTypes = {
    * To specify whether the input field is required or not.
    */
   required: PropTypes.bool,
-  /**
-   * To specify the placeholder text in the input.
-   */
-  placeholder: PropTypes.string,
 };
 
 export default Input;

@@ -1,0 +1,177 @@
+// Ant Table overrides
+
+.ant-table-wrapper {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead.ant-table-thead {
+    tr {
+      th {
+        color: $cs-ui-gray-500;
+        background-color: $cs-ui-white;
+
+        font-size: $cs-ui-text-xs;
+        vertical-align: middle;
+        font-weight: $cs-ui-font-semibold;
+        text-transform: uppercase;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      th.ant-table-cell.ant-table-column-has-sorters {
+        &:hover {
+          background-color: $cs-ui-white;
+        }
+
+        .ant-table-column-sorters {
+          .ant-table-column-sorter.ant-table-column-sorter-full {
+            .ant-table-column-sorter-inner {
+              .ant-table-column-sorter-up {
+                color: $cs-ui-gray-300;
+              }
+
+              .ant-table-column-sorter-down {
+                color: $cs-ui-gray-300;
+              }
+
+              .active {
+                color: $cs-ui-gray-800;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table-tbody > tr.ant-table-row-selected > td {
+    background-color: $cs-ui-pastel-blue;
+  }
+
+  .cs-ui-table--row {
+    color: $cs-ui-gray-700;
+    font-size: $cs-ui-text-sm;
+    font-weight: $cs-ui-font-normal;
+    vertical-align: middle;
+
+    a:not(.cs-ui-btn) {
+      color: $cs-ui-primary;
+
+      transition: $cs-ui-transition;
+      font-weight: $cs-ui-font-medium;
+
+      &:hover {
+        color: darken($cs-ui-primary, 15%);
+
+        text-decoration: underline;
+      }
+    }
+
+    &.cs-ui-table--row_hover {
+      cursor: pointer;
+    }
+  }
+
+  ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
+    li.ant-pagination-item {
+      &:hover {
+        border-color: $cs-ui-gray-700;
+
+        a {
+          color: $cs-ui-gray-700;
+        }
+      }
+    }
+
+    li.ant-pagination-item.ant-pagination-item-active {
+      border-color: $cs-ui-gray-800;
+
+      a {
+        color: $cs-ui-gray-800;
+      }
+    }
+
+    .ant-pagination-prev:not(.ant-pagination-disabled),
+    .ant-pagination-next:not(.ant-pagination-disabled) {
+      &:hover {
+        .ant-pagination-item-link {
+          border-color: $cs-ui-gray-800;
+
+          .anticon.anticon-left,
+          .anticon.anticon-right {
+            color: $cs-ui-gray-800;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-pagination-jump-next.ant-pagination-jump-next-custom-icon,
+  .ant-pagination-jump-prev.ant-pagination-jump-prev-custom-icon {
+    .anticon.anticon-double-right.ant-pagination-item-link-icon,
+    .anticon.anticon-double-left.ant-pagination-item-link-icon {
+      color: $cs-ui-gray-800;
+    }
+  }
+
+  .ant-table-tbody > tr > td,
+  .ant-table-thead > tr > th,
+  .ant-table tfoot > tr > td,
+  .ant-table tfoot > tr > th {
+    padding: 12px 16px;
+  }
+
+  .ant-pagination-options {
+    div.ant-select {
+      &.ant-select-focused {
+        .ant-select-selector {
+          border-color: $cs-ui-gray-800 !important;
+          box-shadow: $cs-ui-shadow;
+          outline: none;
+
+          &:focus,
+          &:focus-visible,
+          &:active {
+            border-color: $cs-ui-gray-800;
+            box-shadow: $cs-ui-shadow;
+          }
+        }
+      }
+
+      &:hover {
+        .ant-select-selector {
+          border-color: $cs-ui-gray-800 !important;
+          box-shadow: $cs-ui-shadow;
+          outline: none;
+
+          &:focus,
+          &:focus-visible,
+          &:active {
+            border-color: $cs-ui-gray-800;
+            box-shadow: $cs-ui-shadow;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: $cs-ui-gray-200;
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: $cs-ui-white;
+    font-weight: inherit;
+    background-color: $cs-ui-gray-800;
+  }
+
+  .ant-spin-nested-loading {
+    .ant-spin.ant-spin-spinning {
+      .ant-spin-dot-item {
+        background-color: $cs-ui-gray-800;
+      }
+    }
+  }
+}

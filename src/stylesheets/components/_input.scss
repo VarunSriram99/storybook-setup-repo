@@ -11,7 +11,7 @@
     width: 100%;
 
     .cs-ui-input__max-length {
-      color: $cs-ui-gray-600
+      color: $cs-ui-gray-600;
     }
   }
 
@@ -28,7 +28,7 @@
     font-size: $cs-ui-text-sm;
     transition: $cs-ui-transition;
     border-radius: $cs-ui-rounded-sm;
-    border: thin solid $cs-ui-gray-400;
+    border: thin solid $cs-ui-shade-medium;
     background-color: $cs-ui-white;
     color: $cs-ui-gray-800;
     overflow: hidden;
@@ -59,7 +59,7 @@
     input {
       padding: 8px;
       line-height: 1.2;
-      min-height: 38px;
+      min-height: 40px;
     }
 
     textarea {
@@ -70,12 +70,12 @@
     }
 
     &:focus-within:not(.cs-ui-input--naked, .cs-ui-input--error) {
-      border-color: $cs-ui-gray-800;
-      box-shadow: $cs-ui-shadow;
+      border-color: $cs-ui-content-darker;
+      box-shadow: 0px 0px 0px 3px #e5e5e5;
     }
 
     &:hover:not(.cs-ui-input--naked, .cs-ui-input--error, .cs-ui-input--warning, .cs-ui-input--success, .cs-ui-input--disabled) {
-      border-color: $cs-ui-gray-700;
+      border-color: $cs-ui-shade-dark;
     }
 
     &.cs-ui-input--error {
@@ -130,7 +130,7 @@
     &.cs-ui-input--small {
       input {
         padding: 5px 8px;
-        min-height: 30px;
+        min-height: 32px;
       }
     }
 
@@ -156,7 +156,7 @@
     align-items: center;
     font-size: 14px;
     color: $cs-ui-gray-600;
-    svg{
+    svg {
       width: 16px;
       height: 16px;
     }
@@ -197,7 +197,7 @@
   font-size: $cs-ui-text-sm;
   color: $cs-ui-state-danger;
   display: flex;
-  gap:2px;
+  gap: 2px;
   align-items: center;
 }
 
@@ -206,7 +206,7 @@
   font-size: $cs-ui-text-sm;
   color: $cs-ui-content-darker;
   display: flex;
-  gap:2px;
+  gap: 2px;
   align-items: center;
 }
 
@@ -215,6 +215,6 @@
   font-size: $cs-ui-text-sm;
   color: $cs-ui-content-darker;
   display: flex;
-  gap:2px;
+  gap: 2px;
   align-items: center;
 }

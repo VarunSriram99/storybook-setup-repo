@@ -4,10 +4,6 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
-import { Error } from '../icons'
-
-import hyphenize from "../utils/hyphenize";
-
 import Label from "./Label";
 
 const Checkbox = ({
@@ -15,6 +11,7 @@ const Checkbox = ({
   error = "",
   className = "",
   required = false,
+  disabled = false,
   ...otherProps
 }) => {
   const id = useId(otherProps.id);
@@ -29,21 +26,13 @@ const Checkbox = ({
           className="cs-ui-checkbox"
           required={required}
           aria-invalid={!!error}
+          disabled={disabled}
           {...otherProps}
         />
-        {label && (
-          <Label data-cy={`${hyphenize(label)}-checkbox-label`} htmlFor={id}>
-            {label}
-          </Label>
-        )}
+        {label && <Label htmlFor={id}>{label}</Label>}
       </div>
       {!!error && (
-        <p
-          data-cy={`${hyphenize(label)}-checkbox-error`}
-          className="cs-ui-input__error"
-          id={errorId}
-        >
-          <Error size={15} />
+        <p className="cs-ui-input__error" id={errorId}>
           {error}
         </p>
       )}
@@ -72,6 +61,7 @@ Checkbox.propTypes = {
    * To specify whether the checkbox is a required field or not.
    */
   required: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 export default Checkbox;

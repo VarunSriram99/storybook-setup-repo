@@ -1,9 +1,10 @@
 import React from "react";
 
 import classnames from "classnames";
+import { NavLink } from "react-router-dom";
 
 import Typography from "./Typography";
-import { RightArrow } from "../icons";
+import { RightArrow } from '../assets/icons';
 
 const noop = () => {};
 
@@ -12,6 +13,7 @@ const Card = ({ className, children, ...otherProps }) => {
     <div
       className={classnames("cs-ui-card__wrapper", className)}
       data-cy="card-container"
+      title="card-container"
       {...otherProps}
     >
       {children}
@@ -28,18 +30,36 @@ const Item = ({
   active,
   activeClassName = "",
   className,
+  to,
 }) => {
-  const Parent = activeClassName ? "NavLink" : "Button";
+  const Parent = props =>
+    to ? (
+      <NavLink to={to} {...props}>
+        {props.children}
+      </NavLink>
+    ) : (
+      <button {...props}>{props.children}</button>
+    );
 
   return (
     <Parent
-      className={classnames("cs-ui-card", className, { active: active })}
+      className={classnames(
+        "cs-ui-card",
+        className,
+        { active: active },
+        { activeClassName: activeClassName }
+      )}
       onClick={onClick}
-      activeClassName={activeClassName}
+      title="card"
     >
       <div className="cs-ui-card__body">
         <div>
-          <Typography style="h1" type="bold" className="cs-ui-card__count">
+          <Typography
+            style="h1"
+            component="h4"
+            type="bold"
+            className="cs-ui-card__count"
+          >
             {count.toLocaleString("en-US", {
               minimumIntegerDigits: 2,
               useGrouping: true,

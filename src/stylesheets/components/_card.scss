@@ -11,12 +11,14 @@
   flex-direction: column;
   justify-content: space-between;
   color: $cs-ui-content-darker;
+  background-color: $cs-ui-shade-background;
   padding-left: 8px;
   padding-right: 8px;
   height: 148px;
   border: solid 1px $cs-ui-shade-light;
   border-radius: $cs-ui-rounded-lg;
   margin: 5px;
+  transition: all 0.2s ease-in-out;
 
   &.active {
     background-color: white;

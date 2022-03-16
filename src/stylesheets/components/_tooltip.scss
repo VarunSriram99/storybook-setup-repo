@@ -117,12 +117,12 @@
   position: absolute;
 }
 
-.tippy-svg-arrow > svg > path{
+.tippy-svg-arrow > svg > path {
   fill: $cs-ui-gray-800;
 }
 
 // light theme
-.tippy-box[data-theme~="light"] .tippy-svg-arrow > svg > path{
+.tippy-box[data-theme~="light"] .tippy-svg-arrow > svg > path {
   fill: $cs-ui-white;
 }
 .tippy-box[data-theme~="light"] {

@@ -1,0 +1,25 @@
+.cs-ui-information-governor-card {
+    background-color: $cs-ui-shade-empty;
+    width: 300px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 10px 1px $cs-ui-gray-200;
+}
+
+.cs-ui-information-governor-card__role {
+    color: #98A2B3;
+}
+
+.cs-ui-information-governor-card__user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.cs-ui-information-governor-card__email {
+    color: #6B7280;
+}

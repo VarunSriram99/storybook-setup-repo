@@ -3,9 +3,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { Close } from "../icons";
+import { Close } from '../assets/icons';
 
-import findContrast from "../utils/findContrast";
+import findContrast from "utils/findContrast";
 
 const sizes = { small: "small", large: "large" };
 
@@ -19,9 +19,9 @@ const Tag = ({
   className,
   ...otherProps
 }) => {
-  let Icon =
+  const Icon =
     typeof icon == "string"
-      ? () => <i className={icon} />
+      ? () => <i title="tag-icon" className={icon} />
       : icon || React.Fragment;
 
   return (
@@ -35,6 +35,7 @@ const Tag = ({
         findContrast(color),
         className
       )}
+      data-testid="tag"
       style={{ backgroundColor: color }}
       {...otherProps}
     >

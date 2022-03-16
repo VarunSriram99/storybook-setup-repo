@@ -27,22 +27,6 @@ const TYPES = {
   uppercase: "uppercase",
 };
 
-const DEFAULT_COMPONENTS = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
-  h6: "h6",
-  jumbo: "div",
-  xLarge: "div",
-  large: "div",
-  medium: "div",
-  small: "div",
-  condensedLarge: "div",
-  condensedMedium: "div",
-};
-
 const COMPONENTS = {
   h1: "h1",
   h2: "h2",
@@ -79,17 +63,14 @@ const Typography = React.forwardRef(
     },
     ref
   ) => {
-    const Component = component
-      ? COMPONENTS[component]
-      : style
-      ? DEFAULT_COMPONENTS[style]
-      : "div";
+    const Component = component ? COMPONENTS[component] : "div";
     return (
       <Component
         ref={ref}
+        role={component ? COMPONENTS[component] : "div"}
+        data-testid="typography"
         className={classnames(
           {
-            "cs-ui-typography": true,
             "cs-ui-text-h1": style === STYLES.h1,
             "cs-ui-text-h2": style === STYLES.h2,
             "cs-ui-text-h3": style === STYLES.h3,

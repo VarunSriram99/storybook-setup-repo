@@ -1,0 +1,16 @@
+@each $color, $value in $cs-ui-theme-colors {
+  .cs-ui-text-#{$color} {
+    color: $value;
+  }
+  .hover\:cs-ui-text-#{$color}:hover {
+    color: $value;
+  }
+  .focus\:cs-ui-text-#{$color}:focus {
+    color: $value;
+  }
+}
+@each $color, $value in $cs-ui-theme-colors {
+  .focus-visible\:cs-ui-text-#{$color}:focus-visible {
+    color: $value;
+  }
+}

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { Close } from "../icons";
+import { Close } from '../assets/icons';
 import Button from "./Button";
 import { Portal, Backdrop } from "../atoms";
 
@@ -41,7 +41,7 @@ const Pane = ({
   useHotkeys("esc", closeOnEsc ? onClose : noop);
 
   return (
-    <Portal className="neeto-ui-portal">
+    <Portal>
       <AnimatePresence>
         {isOpen && (
           <Backdrop
@@ -67,6 +67,7 @@ const Pane = ({
               ref={paneWrapper}
               key="pane-wrapper"
               data-cy="pane-wrapper"
+              data-testid="pane-wrapper"
               exit={{ x: PANE_SIZE, filter: BLUR_FINAL }}
               className={classnames("cs-ui-pane__wrapper", {
                 "cs-ui-pane__wrapper--xs": size === "xs",
@@ -84,6 +85,7 @@ const Pane = ({
                   style="text"
                   icon={Close}
                   className="cs-ui-pane__close"
+                  data-testid="close-button"
                   onClick={onClose}
                 />
               )}
@@ -95,6 +97,40 @@ const Pane = ({
     </Portal>
   );
 };
+
+export const Header = ({ children, className }) => {
+  return (
+    <div className={classnames("cs-ui-pane__header", className)}>
+      {children}
+    </div>
+  );
+};
+
+export const Body = ({ children, className }) => {
+  return (
+    <div className={classnames("cs-ui-pane__body", className)}>{children}</div>
+  );
+};
+
+Body.propTypes = {
+  /**
+   * To specify className to be applied to the pane body container.
+   */
+  className: PropTypes.string,
+  children: PropTypes.node,
+};
+
+export const Footer = ({ children, className }) => {
+  return (
+    <div className={classnames("cs-ui-pane__footer cs-ui-shadow-m", className)}>
+      {children}
+    </div>
+  );
+};
+
+Pane.Header = Header;
+Pane.Body = Body;
+Pane.Footer = Footer;
 
 Pane.propTypes = {
   size: PropTypes.oneOf(sizes),
@@ -131,14 +167,11 @@ Pane.propTypes = {
    * To specify whether the pane component should close on outside click.
    */
   closeOnOutsideClick: PropTypes.bool,
-};
-
-export const Header = ({ children, className }) => {
-  return (
-    <div className={classnames("cs-ui-pane__header", className)}>
-      {children}
-    </div>
-  );
+  /**
+   * To specify if the pane has a footer.
+   * @default true
+   */
+  hasFooter: PropTypes.bool,
 };
 
 Header.propTypes = {
@@ -149,43 +182,12 @@ Header.propTypes = {
   children: PropTypes.node,
 };
 
-export const Body = ({ children, className }) => {
-  return (
-    <div className={classnames("cs-ui-pane__body", className)}>{children}</div>
-  );
-};
-
-Body.propTypes = {
-  /**
-   * To specify className to be applied to the pane body container.
-   */
-  className: PropTypes.string,
-  children: PropTypes.node,
-};
-
-export const Footer = ({ children, className }) => {
-  return (
-    <div className={classnames("cs-ui-pane__footer cs-ui-shadow-m", className)}>
-      {children}
-    </div>
-  );
-};
-
 Footer.propTypes = {
   /**
    * To specify className to be applied to the pane footer container.
    */
   className: PropTypes.string,
   children: PropTypes.node,
-  /**
-   * To specify if the pane has a footer.
-   * @default true
-   */
-  hasFooter: PropTypes.bool,
 };
-
-Pane.Header = Header;
-Pane.Body = Body;
-Pane.Footer = Footer;
 
 export default Pane;

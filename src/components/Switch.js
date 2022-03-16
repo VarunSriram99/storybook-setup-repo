@@ -2,42 +2,47 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import hyphenize from "../utils/hyphenize";
+import hyphenize from "utils/hyphenize";
 import Label from "./Label";
-import { Check, Close } from "../icons";
+import { Check, Close, Error } from '../assets/icons';
 
 const Switch = ({
   label = "",
   required = false,
   className = "",
   error = "",
-  successMessage,
+  onChange = () => {},
   ...otherProps
 }) => {
   const { checked, disabled } = otherProps;
-  const [isChecked, setIsChecked] = useState(checked ? checked : false);
-
+  const [isChecked, setIsChecked] = useState(checked ?? false);
   const id = useId(otherProps.id);
   const errorId = `error_${id}`;
   return (
-    <div className={classnames(["cs-ui-switch__wrapper", className])}>
+    <div
+      className={classnames(["cs-ui-switch__wrapper", className])}
+      data-testid="switch"
+    >
       <div className="cs-ui-switch__container">
         <label
           className={classnames("cs-ui-switch__item", {
-            "cs-ui-switch__item--checked": isChecked,
+            "cs-ui-switch__item--checked": checked || isChecked,
             "cs-ui-switch__item--disabled": disabled,
           })}
         >
           <input
             type="checkbox"
+            onChange={e => {
+              onChange(e);
+              setIsChecked(e.target.checked);
+            }}
             {...otherProps}
-            onChange={() => !checked && setIsChecked(!isChecked)}
           />
           <span aria-hidden="true" className="cs-ui-switch">
-            {isChecked ? (
-              <Check size="12" strokeWidth={20} stroke="currentColor" />
+            {checked || isChecked ? (
+              <Check size="12" strokeWidth={4} />
             ) : (
-              <Close size="12" strokeWidth={3} />
+              <Close size="12" strokeWidth={3} color="#C2C8CC" />
             )}
           </span>
         </label>
@@ -57,16 +62,8 @@ const Switch = ({
           className="cs-ui-input__error"
           id={errorId}
         >
+          <Error size={15} />
           {error}
-        </p>
-      )}
-      {!error && successMessage && (
-        <p
-          data-cy={`${hyphenize(label)}-switch-success`}
-          className="cs-ui-input__success"
-          id={errorId}
-        >
-          {successMessage}
         </p>
       )}
     </div>

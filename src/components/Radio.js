@@ -3,9 +3,9 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import hyphenize from "../utils/hyphenize";
+import hyphenize from "utils/hyphenize";
 
-import { Success, Error } from "../icons";
+import { Success, Error } from '../assets/icons';
 
 import Label from "./Label";
 
@@ -23,7 +23,10 @@ const Radio = ({
   const id = useId(props.id);
   const errorId = `error_${id}`;
   return (
-    <div className={classnames(["cs-ui-radio__wrapper", className])}>
+    <div
+      className={classnames(["cs-ui-radio__wrapper", className])}
+      data-testid="radio"
+    >
       {label && <Label className="cs-ui-radio__label">{label}</Label>}
       <div
         className={classnames(["cs-ui-radio__container"], {
