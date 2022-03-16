@@ -1,0 +1,128 @@
+// Hero Section
+
+.hero-wrapper {
+  height: 1100px;
+  background: rgb(255, 255, 255);
+}
+
+.headline-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  height: 192px;
+  margin-top: 142px;
+}
+
+.ellipse {
+  width: 500.63px;
+  height: 500.63px;
+  left: 767.02px;
+  top: 227.57px;
+  background: #8c63ef;
+}
+
+// Feature Section
+
+.feature-wrapper {
+  width: calc(100% - 160px);
+  height: 672px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fff1cb 0%, #ffffff 100%);
+  border-radius: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: -360px;
+}
+
+// Testimonial Section
+
+.testimonial-main-section {
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-gartner-quote {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  max-width: 649px;
+  height: 152px;
+  background: #faf2ee;
+  border-radius: 5px 5px 0px 5px;
+}
+
+.testimonial-section {
+  height: 620px;
+  background: $cs-ui-landing-page-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-client-quote {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 48px 24px 24px;
+  max-width: 846px;
+  height: 199px;
+  background: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.testimonial-data-safety {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Blog Section
+
+.blog-section {
+  height: 688px;
+  background-color: $cs-ui-landing-page-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Footer Section
+
+.footer {
+  height: 67px;
+  background: $cs-ui-landing-page-background;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links-section {
+  height: 390px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-cta {
+  height: 350px;
+  mix-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(23, 113, 183);
+}

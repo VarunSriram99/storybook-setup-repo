@@ -4,7 +4,7 @@ import Button from '../components/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 };
@@ -21,17 +21,12 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  style: 'secondary',
   label: 'Button',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const Text = Template.bind({});
+Text.args = {
+  style: 'text',
   label: 'Button',
 };
