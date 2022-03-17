@@ -133,6 +133,9 @@ Pane.Body = Body;
 Pane.Footer = Footer;
 
 Pane.propTypes = {
+  /**
+   * To specify the size of the pane
+   */
   size: PropTypes.oneOf(sizes),
   /**
    * To specify whether the pane component is open or not.

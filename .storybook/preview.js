@@ -1,4 +1,3 @@
-import { themes } from '@storybook/theming'
 import '../src/stylesheets/application.scss'
 
 export const parameters = {

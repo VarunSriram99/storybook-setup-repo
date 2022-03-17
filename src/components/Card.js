@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import Typography from "./Typography";
 import { RightArrow } from '../assets/icons';
 
+import PropTypes from 'prop-types';
+
 const noop = () => {};
 
 const Card = ({ className, children, ...otherProps }) => {
@@ -31,6 +33,7 @@ const Item = ({
   activeClassName = "",
   className,
   to,
+  ...otherProps
 }) => {
   const Parent = props =>
     to ? (
@@ -51,6 +54,7 @@ const Item = ({
       )}
       onClick={onClick}
       title="card"
+      {...otherProps}
     >
       <div className="cs-ui-card__body">
         <div>
@@ -92,6 +96,49 @@ const Item = ({
   );
 };
 
+Card.propTypes = {
+  /**
+   * Add additional classNames to cards wrapper
+   */
+  className: PropTypes.string,
+};
+
+
 Card.Item = Item;
+
+Item.propTypes = {
+  /**
+   * Specifies the count to be shown in the card
+   */
+  count: PropTypes.number,
+  /**
+   * Specifies title of the card
+   */
+  title: PropTypes.string,
+  /**
+   * The stats to be shown on the left side of footer
+   */
+  footerLabelLeft: PropTypes.string,
+  /**
+   * The stats to be shown on the right side of footer
+   */
+  footerLabelRight: PropTypes.string,
+  /**
+  * Specifies the function that should execute when card is clicked
+  */
+  onClick: PropTypes.func,
+  /**
+   * Specifies whether current card is active or not
+   */
+  active: PropTypes.bool,
+  /**
+   * The extra classNames to be provided to the card
+   */
+  className: PropTypes.string,
+  /**
+   * Specifies the link to be routed to when card is clicked
+   */
+  to: PropTypes.string,
+};
 
 export default Card;
