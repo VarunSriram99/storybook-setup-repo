@@ -1,0 +1,220 @@
+.cs-ui-input__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  .cs-ui-input__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .cs-ui-input__max-length {
+      color: $cs-ui-gray-600;
+    }
+  }
+
+  .cs-ui-label {
+    margin-bottom: 4px;
+  }
+
+  .cs-ui-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: $cs-ui-text-sm;
+    transition: $cs-ui-transition;
+    border-radius: $cs-ui-rounded-sm;
+    border: thin solid $cs-ui-shade-medium;
+    background-color: $cs-ui-white;
+    color: $cs-ui-gray-800;
+    overflow: hidden;
+
+    &.cs-ui-input--textarea {
+      padding: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background-color: transparent;
+      color: inherit;
+      border: none;
+      font-size: inherit;
+      box-shadow: none;
+      outline: none;
+
+      &::placeholder {
+        color: $cs-ui-gray-400;
+      }
+
+      &:focus {
+        outline-color: transparent;
+      }
+    }
+
+    input {
+      padding: 8px;
+      line-height: 1.2;
+      min-height: 40px;
+    }
+
+    textarea {
+      padding: 0;
+      max-height: 224px;
+      overflow-y: auto;
+      line-height: 1.5;
+    }
+
+    &:focus-within:not(.cs-ui-input--naked, .cs-ui-input--error) {
+      border-color: $cs-ui-content-darker;
+      box-shadow: 0px 0px 0px 3px #e5e5e5;
+    }
+
+    &:hover:not(.cs-ui-input--naked, .cs-ui-input--error, .cs-ui-input--warning, .cs-ui-input--success, .cs-ui-input--disabled) {
+      border-color: $cs-ui-shade-dark;
+    }
+
+    &.cs-ui-input--error {
+      border-color: $cs-ui-state-danger;
+
+      &:focus-within:not(.cs-ui-input--naked) {
+        box-shadow: 0 0 0 3px $cs-ui-pastel-red;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    &.cs-ui-input--warning {
+      border-color: $cs-ui-state-warning;
+
+      &:focus-within:not(.cs-ui-input--naked) {
+        box-shadow: 0 0 0 3px $cs-ui-pastel-orange;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    &.cs-ui-input--success {
+      border-color: $cs-ui-state-success;
+
+      &:focus-within:not(.cs-ui-input--naked) {
+        box-shadow: 0 0 0 3px $cs-ui-pastel-green;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    &.cs-ui-input--disabled {
+      background-color: $cs-ui-gray-100;
+      cursor: not-allowed;
+
+      input {
+        cursor: not-allowed;
+      }
+
+      textarea {
+        cursor: not-allowed;
+      }
+    }
+
+    &.cs-ui-input--small {
+      input {
+        padding: 5px 8px;
+        min-height: 32px;
+      }
+    }
+
+    &.cs-ui-input--naked {
+      border: none;
+      box-shadow: none;
+
+      .cs-ui-input__prefix {
+        margin-left: 0;
+      }
+
+      .cs-ui-input__suffix {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .cs-ui-input__prefix,
+  .cs-ui-input__suffix {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: $cs-ui-gray-600;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .cs-ui-input__prefix {
+    margin-left: 10px;
+  }
+  .cs-ui-input__suffix {
+    margin-right: 10px;
+  }
+
+  .cs-ui-input--block-add-on {
+    .cs-ui-input__prefix,
+    .cs-ui-input__suffix {
+      margin: 0;
+      padding: 8px 10px;
+      background-color: $cs-ui-gray-100;
+    }
+    .cs-ui-input__prefix {
+      border-right: thin solid $cs-ui-gray-300;
+    }
+    .cs-ui-input__suffix {
+      border-left: thin solid $cs-ui-gray-300;
+    }
+  }
+}
+
+.cs-ui-input__help-text {
+  margin-top: 8px;
+  font-size: $cs-ui-text-xs;
+  color: $cs-ui-gray-500;
+  line-height: 1.6;
+}
+
+.cs-ui-input__error {
+  margin-top: 4px;
+  font-size: $cs-ui-text-sm;
+  color: $cs-ui-state-danger;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.cs-ui-input__warning {
+  margin-top: 4px;
+  font-size: $cs-ui-text-sm;
+  color: $cs-ui-content-darker;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.cs-ui-input__success {
+  margin-top: 4px;
+  font-size: $cs-ui-text-sm;
+  color: $cs-ui-content-darker;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}

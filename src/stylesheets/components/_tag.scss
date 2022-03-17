@@ -1,0 +1,71 @@
+.cs-ui-tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: $cs-ui-text-xs;
+  font-weight: $cs-ui-font-normal;
+  padding: 2px 8px;
+  line-height: 1.1;
+  min-height: 20px;
+  border-radius: $cs-ui-rounded-full $cs-ui-rounded-full;
+  color: $cs-ui-gray-800;
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__close {
+    margin-left: 8px;
+    opacity: 0.8;
+    transition: $cs-ui-transition;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &--size-large {
+    padding: 4px 12px;
+    font-weight: $cs-ui-font-medium;
+    font-size: $cs-ui-text-sm;
+    min-height: 26px;
+
+    .cs-ui-tag__icon,
+    .cs-ui-tag__close {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .cs-ui-tag__icon {
+      margin-right: 12px;
+    }
+
+    .cs-ui-tag__close {
+      margin-left: 12px;
+    }
+  }
+
+  &--text-white {
+    color: $cs-ui-white;
+  }
+
+  &--text-dark {
+    color: $cs-ui-content-darker;
+  }
+}

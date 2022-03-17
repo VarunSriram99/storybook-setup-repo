@@ -1,0 +1,94 @@
+.cs-ui-switch__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .cs-ui-switch__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .cs-ui-label {
+      margin-left: 12px;
+    }
+
+    .cs-ui-switch__item {
+      outline: none;
+      width: 44px;
+      height: 21px;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      transition: $cs-ui-transition;
+      background-color: $cs-ui-shade-background;
+      border: 1px solid $cs-ui-shade-light;
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-shrink: 0;
+
+      svg {
+        width: 10px;
+        height: 10px;
+        color: $cs-ui-shade-dark;
+
+        path {
+          stroke-width: 6px;
+        }
+      }
+
+      input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        border: 0;
+      }
+
+      &.cs-ui-switch__item--disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      &.cs-ui-switch__item--checked {
+        background-color: $cs-ui-primary;
+
+        svg {
+          color: $cs-ui-primary;
+          width: 6px;
+          height: 6px;
+
+          path {
+            stroke-width: 4.5px;
+          }
+        }
+      }
+
+
+      .cs-ui-switch {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 15px;
+        height: 15px;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(0);
+        background-color: $cs-ui-white;
+        border-radius: 16px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+        transform: translateX(2px);
+      }
+
+      input:checked + .cs-ui-switch {
+        transform: translateX(25px);
+      }
+
+      &:focus-within {
+        box-shadow: 0 0 0 2px $cs-ui-white, 0 0 0 4px $cs-ui-gray-300;
+      }
+    }
+  }
+}

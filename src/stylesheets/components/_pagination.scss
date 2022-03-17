@@ -1,0 +1,39 @@
+.cs-ui-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cs-ui-pagination__text {
+  display: flex;
+  color: $cs-ui-shade-medium !important;
+  gap: 0.25rem;
+
+  &--highlight{
+    font-weight: $cs-ui-font-bold !important;
+    color: $cs-ui-shade-full !important;
+  }
+
+}
+
+.cs-ui-pagination__right {
+  display: flex;
+  align-items: center;
+}
+
+.cs-ui-pagination__selector {
+  display: flex;
+  align-items: center;
+  color: $cs-ui-shade-medium;
+  gap: 0.5rem;
+
+  &--highlight {
+    font-weight: $cs-ui-font-black !important;
+    color: $cs-ui-shade-full !important;
+  }
+
+  .select{
+    width: 4rem;
+  }
+}
