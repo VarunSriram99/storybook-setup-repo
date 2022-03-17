@@ -13,7 +13,6 @@ const INPUT_SIZES = ["small", "large"];
 const Input = React.forwardRef((props, ref) => {
   const {
     size = "small",
-    type = "text",
     label,
     error = null,
     successMessage = null,
@@ -71,7 +70,7 @@ const Input = React.forwardRef((props, ref) => {
         <input
           ref={ref}
           id={id}
-          type={type}
+          type="text"
           disabled={disabled}
           size={contentSize}
           value={value}
@@ -117,10 +116,6 @@ Input.propTypes = {
    * To specify the size of input.
    */
   size: PropTypes.oneOf(INPUT_SIZES),
-  /**
-   * To specify the type of input field.
-   */
-  type: PropTypes.string,
   /**
    * To specify a maximum character limit to the input.
    */

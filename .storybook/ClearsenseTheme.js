@@ -6,10 +6,14 @@ export default create({
   brandTitle: 'Clearsense UI',
   brandImage: logo,
 
-  barTextColor: 'rgb(139,195,255)',
-  barBg: '#236da6',
+  barTextColor: 'white',
+  barBg: 'rgb(30,148,252)',
   barSelectedColor: "white",
 
+//   barTextColor: '#4A57C4',
+//   barBg: '#E8F4FD',
+//   barSelectedColor: "#4A57C4",
+
   appBg: 'white',
-  appContentBg: '#f7f8fc',
+  appContentBg: 'white',
 });

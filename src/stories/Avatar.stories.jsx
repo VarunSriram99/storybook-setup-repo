@@ -6,6 +6,14 @@ import Typography from '../components/Typography';
 export default {
   title: 'Components/Avatar',
   component: Avatar,
+  parameters: {
+    layout: "padded",
+    docs: {
+      description: {
+        component: '`import { Avatar } from "clearsense-ui/components";`',
+      },
+    },
+  },
 };
 
 const Template = (args) => <div><Avatar {...args} /></div>;
