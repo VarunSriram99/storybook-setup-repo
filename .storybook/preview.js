@@ -1,3 +1,4 @@
+import { themes } from '@storybook/theming'
 import '../src/stylesheets/application.scss'
 
 export const parameters = {
@@ -7,5 +8,5 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-  },
+  }
 }
