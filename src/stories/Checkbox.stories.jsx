@@ -5,6 +5,14 @@ import Checkbox from '../components/Checkbox';
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
+  parameters: {
+    layout: "padded",
+    docs: {
+      description: {
+        component: '`import { Checkbox } from "clearsense-ui/components";`',
+      },
+    },
+  },
 };
 
 const Template = (args) => <Checkbox {...args} />;

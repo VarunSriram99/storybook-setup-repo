@@ -4,6 +4,8 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
+import { Error } from "../assets/icons";
+
 import Label from "./Label";
 
 const Checkbox = ({
@@ -33,6 +35,7 @@ const Checkbox = ({
       </div>
       {!!error && (
         <p className="cs-ui-input__error" id={errorId}>
+          <Error size={15} />
           {error}
         </p>
       )}

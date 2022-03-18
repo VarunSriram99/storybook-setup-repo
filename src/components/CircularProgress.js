@@ -3,6 +3,8 @@ import React from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
+import PropTypes from 'prop-types';
+
 const CircularProgress = ({ percentage = 0 }) => {
   return (
     <div data-testid="circular-progress">
@@ -22,5 +24,9 @@ const CircularProgress = ({ percentage = 0 }) => {
     </div>
   );
 };
+
+CircularProgress.propTypes = {
+  percentage: PropTypes.number
+}
 
 export default CircularProgress;
