@@ -48,6 +48,7 @@ const Pagination = ({
             maxMenuHeight={200}
             menuPlacement="auto"
             className="select"
+            strategy="fixed"
           />
         </div>
       )}
@@ -98,6 +99,7 @@ const Pagination = ({
             maxMenuHeight={200}
             menuPlacement="auto"
             className="select"
+            strategy="fixed"
           />
           <Typography>of</Typography>
           <Typography className="cs-ui-pagination__selector--highlight">

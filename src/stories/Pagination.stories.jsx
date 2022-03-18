@@ -17,3 +17,8 @@ PaginationComponent.args = {
     totalRecordsCount: 100,
     showResultsPerPage: true,
 };
+
+export const PaginationComponentWithoutResultsPerPage = Template.bind({});
+PaginationComponentWithoutResultsPerPage.args = {
+    totalRecordsCount: 100,
+};
