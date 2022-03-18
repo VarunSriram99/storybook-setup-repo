@@ -5,6 +5,14 @@ import Pagination from '../components/Pagination';
 export default {
   title: 'Components/Pagination',
   component: Pagination,
+  parameters: {
+    layout: "padded",
+    docs: {
+      description: {
+        component: '`import { Pagination } from "clearsense-ui/components";`',
+      },
+    },
+  },
 };
 
 const Template = (args) => {

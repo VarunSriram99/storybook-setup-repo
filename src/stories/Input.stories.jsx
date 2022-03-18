@@ -6,6 +6,14 @@ import Typography from '../components/Typography';
 export default {
   title: 'Components/Input',
   component: Input,
+  parameters: {
+    layout: "padded",
+    docs: {
+      description: {
+        component: '`import { Input } from "clearsense-ui/components";`',
+      },
+    },
+  },
 };
 
 const Template = (args) => <Input {...args} />;

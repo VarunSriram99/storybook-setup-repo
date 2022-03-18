@@ -5,6 +5,14 @@ import InformationGovernorCard from '../components/InformationGovernorCard';
 export default {
   title: 'Components/Information Governor Card',
   component: InformationGovernorCard,
+  parameters: {
+    layout: "padded",
+    docs: {
+      description: {
+        component: '`import { InformationGovernorCard } from "clearsense-ui/components";`',
+      },
+    },
+  },
 };
 
 const Template = (args) => <InformationGovernorCard {...args} />;
