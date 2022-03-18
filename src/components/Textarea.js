@@ -4,7 +4,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 
 import Label from "./Label";
 import Typography from "./Typography";
@@ -20,7 +20,7 @@ const Textarea = props => {
     className,
     helpText = "",
     successMessage,
-    touched,
+    touched = true,
     nakedTextarea = false,
     maxLength,
     ...otherProps

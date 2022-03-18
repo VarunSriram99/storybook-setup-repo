@@ -95,6 +95,10 @@ Switch.propTypes = {
    * To disable the component
    */
   disabled: PropTypes.bool,
+  /**
+   * To specify the callback to be executed when the state of the switch changes
+   */
+  onChange: PropTypes.func,
 };
 
 export default Switch;

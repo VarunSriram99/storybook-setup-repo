@@ -5,7 +5,7 @@ import classnames from "classnames";
 
 import { Close } from '../assets/icons';
 
-import findContrast from "utils/findContrast";
+import findContrast from "../utils/findContrast";
 
 const sizes = { small: "small", large: "large" };
 
@@ -47,7 +47,7 @@ const Tag = ({
       {label}
 
       {onClose && (
-        <span onClick={!disabled && onClose} className="cs-ui-tag__close">
+        <span onClick={disabled ? ()=>{} : onClose} className="cs-ui-tag__close">
           <Close />
         </span>
       )}
@@ -60,18 +60,39 @@ Tag.defaultProps = {
   size: sizes.small,
   label: "",
   color: "#fff",
-  onClose: null,
+  onClose: ()=>{},
   disabled: false,
   className: "",
 };
 
 Tag.propTypes = {
+  /**
+   * To specify the icon to be used in the tag.
+   */
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
+  /**
+   * To specify the size of the tag.
+   */
   size: PropTypes.oneOf(Object.keys(sizes)),
+  /**
+   * To specify the label of the tag.
+   */
   label: PropTypes.string,
+  /**
+   * To specify the background color of the tag in hex format eg: "#1234ff" or "#fff".
+   */
   color: PropTypes.string,
+  /**
+   * To specify the callback to be called when the close button is pressed. Close button only appears when onClose is specified.
+   */
   onClose: PropTypes.func,
+  /**
+   * To specify whether tag is disabled or not.
+   */
   disabled: PropTypes.bool,
+  /**
+   * To specify the additional classes to be provided to the tag element.
+   */
   className: PropTypes.string,
 };
 

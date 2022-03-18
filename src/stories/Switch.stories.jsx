@@ -28,3 +28,9 @@ SwitchWithError.args = {
     error: "Error",
     required: true,
 };
+
+export const SwitchDisabled = Template.bind({});
+SwitchDisabled.args = {
+    label: "Switch",
+    disabled: true,
+};
