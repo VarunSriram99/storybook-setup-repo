@@ -3,7 +3,10 @@ import React from "react";
 import classNames from "classnames";
 import Tooltip from "./Tooltip";
 
-import { Check } from "../icons";
+import { Check } from "../assets/icons";
+import PropTypes from "prop-types";
+
+const STYLES = ["primary", "secondary"]
 
 const Steps = ({ steps, currentStep, style = "primary", className }) => {
   return (
@@ -47,5 +50,24 @@ const Steps = ({ steps, currentStep, style = "primary", className }) => {
     </div>
   );
 };
+
+Steps.propTypes = {
+  /**
+   * To specify the array of all the step titles.
+   */
+  steps: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * To specify the number of the current step starting from 1.
+   */
+  currentStep: PropTypes.number,
+  /**
+   * To specify the style of steps component
+   */
+  style: PropTypes.oneOf(STYLES),
+  /**
+   * To specify the additional classnames for the steps component
+   */
+  className: PropTypes.string,
+}
 
 export default Steps;

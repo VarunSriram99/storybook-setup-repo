@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 import Label from "./Label";
 import { Check, Close, Error } from '../assets/icons';
 
@@ -75,8 +75,17 @@ Switch.propTypes = {
    * Text to be displayed above the component
    */
   label: PropTypes.node,
+  /**
+   * To specify whether it is a required field or not
+   */
   required: PropTypes.bool,
+  /**
+   * To specify the classnames to be provided to the switch
+   */
   className: PropTypes.string,
+  /**
+   * To specify the error message to be displayed under the switch
+   */
   error: PropTypes.string,
   /**
    * Checks whether the switch is checked or not
