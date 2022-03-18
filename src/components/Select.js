@@ -137,6 +137,18 @@ Select.propTypes = {
    * To specify the ref to the select component.
    */
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  /**
+   * To specify the options to be provided in the select dropdown.
+   */
+  options: PropTypes.arrayOf(PropTypes.shape({label: PropTypes.string, value: PropTypes.string})),
+  /**
+   * To specify the default value of select if no options were selected.
+   */
+  defaultValue: PropTypes.shape({label: PropTypes.string, value: PropTypes.string}),
+  /**
+   * To specify whether the options csn be searched to get a value.
+   */
+  isSearchable: PropTypes.bool,
 };
 
 export default Select;

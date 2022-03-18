@@ -11,11 +11,11 @@
 
   .cs-ui-radio-input__error {
     margin-top: 4px;
-    color: $cs-ui-error;
-    font-size: $cs-ui-text-xs;
+    font-size: $cs-ui-text-sm;
+    color: $cs-ui-state-danger;
     display: flex;
+    gap: 2px;
     align-items: center;
-    gap: 2px
   }
   .cs-ui-radio-input__success {
     margin-top: 4px;
