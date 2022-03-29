@@ -123,8 +123,7 @@ export const ModalSizing = () => {
         </Modal.Header>
         <Modal.Body>
           <Typography style="large" lineHeight="normal">
-            Somewhere out in space live The Herculoids! Zok, the laser-ray
-            dragon! Igoo, the giant rock ape! Tundro, the tremendous!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus possimus reprehenderit doloremque corporis.
           </Typography>
         </Modal.Body>
         <Modal.Footer className="space-x-2">
