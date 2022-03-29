@@ -1,0 +1,27 @@
+.cs-ui-callout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: $cs-ui-rounded-sm;
+  padding: 16px 12px;
+  font-size: $cs-ui-text-sm;
+  line-height: 20px;
+  color: $cs-ui-gray-700;
+
+  .cs-ui-callout__icon {
+    flex-shrink: 0;
+    margin-right: 12px;
+    color: $cs-ui-gray-600;
+  }
+
+  &.cs-ui-callout--info {
+    background-color: $cs-ui-pastel-blue;
+  }
+  &.cs-ui-callout--warning {
+    background-color: $cs-ui-pastel-yellow;
+  }
+  &.cs-ui-callout--danger {
+    background-color: $cs-ui-pastel-red;
+  }
+}
