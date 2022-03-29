@@ -4,9 +4,9 @@ import classnames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { Close } from "icons";
+import { Close } from "../../icons";
 import { Portal, Backdrop } from "../../atoms";
-import { useOnClickOutside } from "utils/useOnClickOutside";
+import { useOnClickOutside } from "../../utils/useOnClickOutside";
 import { BLUR_INITIAL, BLUR_FINAL, TRANSITION } from "../../constants/overlay";
 import Button from "../Button";
 import Header from "./Header";
