@@ -21,11 +21,11 @@ const Template = (args) => <BrowserRouter><SubHeader {...args} /></BrowserRouter
 
 export const SubHeaderBreadcrumbs = Template.bind({});
 SubHeaderBreadcrumbs.args = {
-  breadcrumbs: [{link: '//', label: "First crumb"}, {link: '//', label: "First crumb"}, {link: '//', label: "Second crumb"}, {link: '//', label: "Last crumb"}]
+  breadcrumbs: [{link: '//', label: "First crumb"}, {link: '//', label: "Second crumb"}, {link: '//', label: "Last crumb"}]
 };
 
 export const SubHeaderWithActionBlock = Template.bind({});
 SubHeaderWithActionBlock.args = {
-    breadcrumbs: [{link: '/firstcrumb', label: "First crumb"}, {link: '/secondcrumb', label: "First crumb"}, {link: '/thirdcrumb', label: "Second crumb"}, {link: '/fourthcrumb', label: "Last crumb"}],
+    breadcrumbs: [{link: '/firstcrumb', label: "First crumb"}, {link: '/secondcrumb', label: "Second crumb"}, {link: '/thirdcrumb', label: "Third crumb"}, {link: '/fourthcrumb', label: "Last crumb"}],
     actionBlock: <Button label="Action Block" />
 };

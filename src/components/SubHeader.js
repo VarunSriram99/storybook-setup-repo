@@ -10,7 +10,7 @@ const SubHeader = ({ breadcrumbs, actionBlock, className }) => {
   const [currentItem, setCurrentItem] = useState();
 
   useEffect(() => {
-    setCurrentItem(breadcrumbs.pop());
+    setCurrentItem(breadcrumbs[breadcrumbs.length - 1]);
   }, [breadcrumbs]);
 
   return (
@@ -18,7 +18,7 @@ const SubHeader = ({ breadcrumbs, actionBlock, className }) => {
       <div>
         <div className="cs-ui-sub-header__navigation">
           <Home size={16} className="cs-ui-sub-header__navigation__icon" />
-          {breadcrumbs.map((breadcrumb, idx) => (
+          {breadcrumbs.slice(0, breadcrumbs.length - 1).map((breadcrumb, idx) => (
             <Link
               to={breadcrumb.link}
               key={idx}
