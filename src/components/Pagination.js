@@ -44,10 +44,11 @@ const Pagination = ({
           <Select
             defaultValue={{ value: pageSize, label: pageSize }}
             options={pageSizeOptions}
-            onChange={option => setPageSize(option.value)}
+            onChange={(option) => setPageSize(option.value)}
             maxMenuHeight={200}
             menuPlacement="auto"
             className="select"
+            strategy="fixed"
           />
         </div>
       )}
@@ -94,10 +95,11 @@ const Pagination = ({
                 : { value: currentPage, label: currentPage }
             }
             options={options}
-            onChange={option => setCurrentPage(option.value)}
+            onChange={(option) => setCurrentPage(option.value)}
             maxMenuHeight={200}
             menuPlacement="auto"
             className="select"
+            strategy="fixed"
           />
           <Typography>of</Typography>
           <Typography className="cs-ui-pagination__selector--highlight">

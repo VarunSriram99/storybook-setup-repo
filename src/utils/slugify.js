@@ -1,5 +1,5 @@
 /* eslint-disable */
-const Slugify = string => {
+const Slugify = (string) => {
   return string
     .toString()
     .toLowerCase()

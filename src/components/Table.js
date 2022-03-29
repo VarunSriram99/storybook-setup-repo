@@ -63,7 +63,7 @@ const Table = ({
   );
 
   const tableRef = useCallback(
-    table => {
+    (table) => {
       if (fixedHeight) {
         if (table !== null) {
           resizeObserver.current.observe(table?.parentNode);
@@ -102,7 +102,7 @@ const Table = ({
       }}
       onRow={(record, rowIndex) => {
         return {
-          onClick: event => onRowClick && onRowClick(event, record, rowIndex),
+          onClick: (event) => onRowClick && onRowClick(event, record, rowIndex),
         };
       }}
       locale={locale}

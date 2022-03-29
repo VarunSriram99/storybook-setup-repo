@@ -1,4 +1,4 @@
-const hexToRGB = hex => {
+const hexToRGB = (hex) => {
   let r, g, b;
   if (hex.length === 4) {
     r = parseInt(hex[1] + hex[1], 16);

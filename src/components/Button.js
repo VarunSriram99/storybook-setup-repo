@@ -36,7 +36,7 @@ const Button = React.forwardRef((props, ref) => {
     ...otherProps
   } = props;
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (!loading && !disabled) {
       onClick(e);
     }

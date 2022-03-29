@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import { usePopper } from "react-popper";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { DownMinimalArrow } from '../assets/icons';
-import { Button } from "clearsense-ui/components";
+import { DownMinimalArrow } from "../assets/icons";
+import Button from "./Button";
 
-import {useOnClickOutside} from "../utils/useOnClickOutside";
+import { useOnClickOutside } from "../utils/useOnClickOutside";
 
 const noop = () => {};
 const DROPDOWN_BTN_STYLES = {
@@ -96,7 +96,6 @@ const Dropdown = ({
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   closeOnEsc && useHotkeys("esc", onPopupClose);
-
 
   if (!isControlled) {
     buttonProps = {
@@ -191,10 +190,16 @@ Dropdown.propTypes = {
    * To specify the label for dropdown target button.
    */
   label: PropTypes.string,
+  /**
+   * To specify whther the dropdown is open or not
+   */
   isOpen: PropTypes.bool,
+  /**
+   * To specify the function tobe executed when dropdown is closed
+   */
   onClose: PropTypes.func,
   /**
-   * To specify the triggerring aciton for dropdown.
+   * To specify the triggerring action for dropdown.
    */
   trigger: PropTypes.oneOf(Object.values(TRIGGERS)),
   /**
@@ -207,6 +212,9 @@ Dropdown.propTypes = {
    * To specify the classes to be passed to the dropdown menu.
    */
   ulProps: PropTypes.object,
+  /**
+   * To specify which side of the button the dropdown should appear on.
+   */
   position: PropTypes.oneOf(Object.values(PLACEMENT)),
   /**
    * To specify the content to be rendered inside the Dropdown.
@@ -236,14 +244,29 @@ Dropdown.propTypes = {
    * To specify whether the dropdown is disabled or not.
    */
   disabled: PropTypes.bool,
+  /**
+   * To specify whther the dropdown should close on escape.
+   */
   closeOnEsc: PropTypes.bool,
   /**
    * To specify whether the dropdown should close on selecting an option.
    */
   closeOnSelect: PropTypes.bool,
+  /**
+   * To specify whether the dropdown should close when clicked outside it.
+   */
   closeOnOutsideClick: PropTypes.bool,
+  /**
+   * To specify the additional modifiers for the popper which renders the dropdown.
+   */
   dropdownModifiers: PropTypes.array,
+  /**
+   * To specify the primary action to be executes when the dropdown button is clicked
+   */
   primaryAction: PropTypes.func,
+  /**
+   * To specify the additional classnames to be given to the primary button.
+   */
   primaryButtonClass: PropTypes.string,
 };
 

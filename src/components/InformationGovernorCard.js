@@ -4,6 +4,7 @@ import Avatar from "./Avatar";
 import Typography from "./Typography";
 
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const InformationGovernorCard = ({ name, email, imageUrl, className }) => {
   return (
@@ -34,3 +35,22 @@ const InformationGovernorCard = ({ name, email, imageUrl, className }) => {
 };
 
 export default InformationGovernorCard;
+
+InformationGovernorCard.propTypes = {
+  /**
+   * To specify the name of the user.
+   */
+  name: PropTypes.string,
+  /**
+   * To specify the email of the user.
+   */
+  email: PropTypes.string,
+  /**
+   * To specify the image url of the user's profile picture. (Optional)
+   */
+  imageUrl: PropTypes.string,
+  /**
+   * To aspecify the additional classnames to be provided to the component.
+   */
+  className: PropTypes.string,
+};

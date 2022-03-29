@@ -2,7 +2,7 @@ import React from "react";
 import { join } from "ramda";
 import Linkify from "react-linkify";
 import { toast, Slide } from "react-toastify";
-import { Success, Warning, Info, Close, CloseCircle } from '../assets/icons';
+import { Success, Warning, Info, Close, CloseCircle } from "../assets/icons";
 
 const noop = () => {};
 
@@ -47,7 +47,7 @@ const ToastrComponent = ({
       </Linkify>
       {buttonLabel && (
         <button
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
             onClick();
           }}
@@ -102,9 +102,9 @@ const showWarningToastr = (message, buttonLabel, onClick) => {
   );
 };
 
-const isError = e => e && e.stack && e.message;
-const isAxiosError = e => typeof e === "object" && e.isAxiosError === true;
-const isString = s => typeof s === "string" || s instanceof String;
+const isError = (e) => e && e.stack && e.message;
+const isAxiosError = (e) => typeof e === "object" && e.isAxiosError === true;
+const isString = (s) => typeof s === "string" || s instanceof String;
 
 const showErrorToastr = (errorObject, buttonLabel, onClick) => {
   let errorMessage;

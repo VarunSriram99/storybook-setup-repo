@@ -27,7 +27,7 @@ const DropdownOverlay = ({
         <Button
           label={buttonLabel}
           style={buttonStyle}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
             setIsOpen(true);
           }}
@@ -37,7 +37,7 @@ const DropdownOverlay = ({
           <>
             <div className="cs-ui-dropdown-overlay__bg-overlay" />
             <div
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
               className={classnames("cs-ui-dropdown-overlay__body", {
                 "cs-ui-dropdown-overlay__body--left":
                   position === POSITION.left,

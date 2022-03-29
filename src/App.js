@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.scss';
-import Button from './components/Button';
+import logo from "./logo.svg";
+import "./App.scss";
+import Button from "./components/Button";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Button label="hello"/>
+      <Button label="hello" />
     </div>
   );
 }

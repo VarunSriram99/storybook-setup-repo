@@ -4,13 +4,13 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 
-import hyphenize from "utils/hyphenize";
+import hyphenize from "../utils/hyphenize";
 
 import Label from "./Label";
 import Typography from "./Typography";
-import { Success, Error } from '../assets/icons';
+import { Success, Error } from "../assets/icons";
 
-const Textarea = props => {
+const Textarea = (props) => {
   const {
     rows = 3,
     label,
@@ -20,14 +20,14 @@ const Textarea = props => {
     className,
     helpText = "",
     successMessage,
-    touched,
+    touched = true,
     nakedTextarea = false,
     maxLength,
     ...otherProps
   } = props;
 
   const [valueInternal, setValueInternal] = useState("");
-  const onChangeInternal = e => setValueInternal(e.target.value);
+  const onChangeInternal = (e) => setValueInternal(e.target.value);
 
   const value = props.value ?? valueInternal;
   const onChange = props.onChange ?? onChangeInternal;

@@ -1,6 +1,6 @@
 import { DataConsumption, DataHub, DataIngestion } from "icons";
 
-export const getClientApp = subdomain => {
+export const getClientApp = (subdomain) => {
   return [
     {
       name: "Data Ingestion",

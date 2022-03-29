@@ -22,6 +22,8 @@ import Toastr from "./Toastr";
 import Switch from "./Switch";
 import CircularProgress from "./CircularProgress";
 import Radio from "./Radio";
+import Modal from './Modal';
+import Callout from './Callout';
 
 export {
   Alert,
@@ -48,4 +50,6 @@ export {
   Switch,
   CircularProgress,
   Radio,
+  Modal,
+  Callout,
 };

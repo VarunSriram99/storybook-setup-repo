@@ -16,7 +16,7 @@ const SelectField = React.forwardRef((props, ref) => {
   } = props;
   const [field, meta, { setValue, setTouched }] = useField(name);
 
-  const getRealOptionValue = option => {
+  const getRealOptionValue = (option) => {
     if (typeof getOptionValue !== "function") {
       return option.value;
     }
@@ -26,7 +26,7 @@ const SelectField = React.forwardRef((props, ref) => {
   const buildValueObj = (value, options) => {
     if (typeof value === "object") return value;
 
-    return options.filter(option => getRealOptionValue(option) === value)[0];
+    return options.filter((option) => getRealOptionValue(option) === value)[0];
   };
 
   return (
@@ -39,10 +39,10 @@ const SelectField = React.forwardRef((props, ref) => {
           ? null
           : buildValueObj(field.value, options)
       }
-      onChange={value => setValue(value)}
+      onChange={(value) => setValue(value)}
       onBlur={() => setTouched(true)}
       error={meta.touched ? meta.error : ""}
-      getOptionValue={getOptionValue || (option => option.value)}
+      getOptionValue={getOptionValue || ((option) => option.value)}
       isMulti={!!isMulti}
       {...otherProps}
     />

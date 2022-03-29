@@ -1,4 +1,4 @@
-const hyphenize = string => {
+const hyphenize = (string) => {
   const fallbackString = "cs-ui";
 
   if (string && string.replace) {

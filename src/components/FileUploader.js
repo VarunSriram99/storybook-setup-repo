@@ -12,11 +12,11 @@ const FileUploader = ({ className, onUploadFinish, setIsButtonLoading }) => {
   const [isUploading, setIsUploading] = useState(false);
   const [files, setFiles] = useState();
 
-  const onDrop = useCallback(async acceptedFiles => {
+  const onDrop = useCallback(async (acceptedFiles) => {
     setIsUploading(true);
     setIsButtonLoading(true);
     const dataUrlFiles = await Promise.all(
-      acceptedFiles.map(file => fileToDataUrl(file))
+      acceptedFiles.map((file) => fileToDataUrl(file))
     );
     setIsUploading(false);
     setIsButtonLoading(false);
@@ -24,8 +24,8 @@ const FileUploader = ({ className, onUploadFinish, setIsButtonLoading }) => {
     onUploadFinish(dataUrlFiles);
   }, []);
 
-  const fileToDataUrl = blob => {
-    return new Promise(resolve => {
+  const fileToDataUrl = (blob) => {
+    return new Promise((resolve) => {
       const reader = new FileReader();
       reader.onload = () => {
         resolve({ path: blob.path, data: reader.result });
@@ -42,7 +42,7 @@ const FileUploader = ({ className, onUploadFinish, setIsButtonLoading }) => {
       className={classnames("cs-ui-file-uploader", className, {
         "cs-ui-file-uploader__file--drag_enter": isDragActive,
       })}
-      {...getRootProps({ onClick: evt => evt.stopPropagation() })}
+      {...getRootProps({ onClick: (evt) => evt.stopPropagation() })}
     >
       <AnimatePresence>
         <div className="cs-ui-file-uploader__content">
@@ -62,7 +62,7 @@ const FileUploader = ({ className, onUploadFinish, setIsButtonLoading }) => {
               exit={{ opacity: 0 }}
             >
               <ul>
-                {files.map(file => {
+                {files.map((file) => {
                   const paths = file.path.split("/");
                   const fileName = paths[paths.length - 1];
                   return <li>{fileName}</li>;

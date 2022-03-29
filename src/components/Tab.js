@@ -112,6 +112,9 @@ Item.propTypes = {
    * Callback to be triggered when user clicks on the Tab Item
    */
   onClick: PropTypes.func,
+  /**
+   * The additional classname to be provided if the link is active. The container becomes a navlink if this value is given.
+   */
   activeClassName: PropTypes.string,
 };
 

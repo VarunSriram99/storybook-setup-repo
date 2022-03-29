@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { AnimatePresence, motion } from "framer-motion";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { Close } from '../assets/icons';
+import { Close } from "../assets/icons";
 import Button from "./Button";
 import { Portal, Backdrop } from "../atoms";
 
