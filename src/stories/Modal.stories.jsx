@@ -41,7 +41,7 @@ export const Default = () => {
           </Typography>
         </Modal.Header>
         <Modal.Body>
-          <Typography style="body2" lineHeight="normal">
+          <Typography style="large" lineHeight="normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias provident necessitatibus, eos autem corporis sunt reiciendis perspiciatis tenetur fugiat repellat. Totam hic facilis consectetur illum delectus, velit facere laboriosam?
           </Typography>
         </Modal.Body>
@@ -94,7 +94,7 @@ export const ModalSizing = () => {
           </Typography>
         </Modal.Header>
         <Modal.Body>
-          <Typography style="body2" lineHeight="normal">
+          <Typography style="large" lineHeight="normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </Typography>
         </Modal.Body>
@@ -122,7 +122,7 @@ export const ModalSizing = () => {
           <Typography style="h2">Modal Title</Typography>
         </Modal.Header>
         <Modal.Body>
-          <Typography style="body2" lineHeight="normal">
+          <Typography style="large" lineHeight="normal">
             Somewhere out in space live The Herculoids! Zok, the laser-ray
             dragon! Igoo, the giant rock ape! Tundro, the tremendous!
           </Typography>
@@ -151,7 +151,7 @@ export const ModalSizing = () => {
           <Typography style="h2">Modal Title</Typography>
         </Modal.Header>
         <Modal.Body>
-          <Typography style="body2" lineHeight="normal">
+          <Typography style="large" lineHeight="normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ex hic vitae natus nam dignissimos corrupti aspernatur dicta, voluptates aliquam debitis earum obcaecati veniam a incidunt magni amet minus impedit!
           </Typography>
         </Modal.Body>

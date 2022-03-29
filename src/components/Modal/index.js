@@ -45,7 +45,6 @@ const Modal = ({
 
   useOnClickOutside(
     modalWrapper,
-    backdropRef,
     closeOnOutsideClick ? onClose : noop
   );
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, Typography } from "clearsense-ui/components";
+import { Button, Typography } from "../index";
 
 const Body = ({
   title,
@@ -13,7 +13,7 @@ const Body = ({
 }) => (
   <>
     <div className="cs-ui-modal__header" data-cy="alert-title">
-      {title && <Typography style="h2">{title}</Typography>}
+      {title && <Typography style="h3">{title}</Typography>}
     </div>
     <div className="cs-ui-modal__body" data-cy="alert-message">
       <Typography style="condensedMedium">{message}</Typography>

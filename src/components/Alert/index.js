@@ -4,15 +4,15 @@ import classnames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { Portal, Backdrop } from "clearsense-ui/atoms";
-import { useOnClickOutside } from "utils/useOnClickOutside";
+import { Portal, Backdrop } from "../../atoms";
+import { useOnClickOutside } from "../../utils/useOnClickOutside";
 import {
   BLUR_INITIAL,
   BLUR_FINAL,
   TRANSITION,
-} from "clearsense-ui/constants/overlay";
-import { Close } from "icons";
-import { Button, PageLoader } from "clearsense-ui/components";
+} from "../../constants/overlay";
+import { Close } from "../../icons";
+import { Button, PageLoader } from "../index";
 import Body from "./Body";
 
 const noop = () => {};
@@ -45,7 +45,6 @@ const Alert = ({
 
   useOnClickOutside(
     modalWrapper,
-    backdropRef,
     closeOnOutsideClick ? onClose : noop
   );
 
