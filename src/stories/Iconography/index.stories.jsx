@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 const copyIcon = (icon) => {
   navigator.clipboard.writeText(`import {${icon}} from \'icons\';`);
-  Toastr.success(`Copied the icon ${icon} to clipboard.`);
+  Toastr.success(`Copied the icon '${icon}' to clipboard.`);
 };
 
 export default {
@@ -16,7 +16,7 @@ export default {
     layout: "padded",
     docs: {
       description: {
-        component: '`import { IconName } from "icons";`<br/> Click on the icons to copy their import statement.',
+        component: '`import { IconName } from "icons";`<br/> Click on the icons to copy their import statement.<br/><br/>You can pass `color` and `size` props to the icons.<br/>Eg: `<Close color="#FFFFFF" size={15} />`',
       },
     },
   },
