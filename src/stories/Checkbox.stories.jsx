@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Checkbox from '../components/Checkbox';
+import Checkbox from "../components/Checkbox";
 
 export default {
-  title: 'Components/Checkbox',
+  title: "Components/Checkbox",
   component: Checkbox,
   parameters: {
     layout: "padded",
@@ -19,12 +19,11 @@ const Template = (args) => <Checkbox {...args} />;
 
 export const CheckboxRegular = Template.bind({});
 CheckboxRegular.args = {
-  label: "Checkbox"
+  label: "Checkbox",
 };
 
 export const CheckboxWithError = Template.bind({});
 CheckboxWithError.args = {
   label: "Checkbox",
-  error: "This is an error"
+  error: "This is an error",
 };
-

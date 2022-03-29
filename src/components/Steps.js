@@ -6,7 +6,7 @@ import Tooltip from "./Tooltip";
 import { Check } from "../assets/icons";
 import PropTypes from "prop-types";
 
-const STYLES = ["primary", "secondary"]
+const STYLES = ["primary", "secondary"];
 
 const Steps = ({ steps, currentStep, style = "primary", className }) => {
   return (
@@ -68,6 +68,6 @@ Steps.propTypes = {
    * To specify the additional classnames for the steps component
    */
   className: PropTypes.string,
-}
+};
 
 export default Steps;

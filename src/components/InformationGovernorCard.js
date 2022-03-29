@@ -4,7 +4,7 @@ import Avatar from "./Avatar";
 import Typography from "./Typography";
 
 import classNames from "classnames";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const InformationGovernorCard = ({ name, email, imageUrl, className }) => {
   return (
@@ -52,5 +52,5 @@ InformationGovernorCard.propTypes = {
   /**
    * To aspecify the additional classnames to be provided to the component.
    */
-  className: PropTypes.string, 
-}
+  className: PropTypes.string,
+};

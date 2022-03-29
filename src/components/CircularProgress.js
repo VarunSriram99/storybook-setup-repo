@@ -3,17 +3,15 @@ import React from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const CircularProgress = ({ percentage = 0 }) => {
   const formatPercentage = (percentage) => {
-    const roundedPercentage = Math.round(percentage)
-    if(roundedPercentage>100)
-      return 100;
-    else if(roundedPercentage<0)
-      return 0;
-    else return roundedPercentage
-  }
+    const roundedPercentage = Math.round(percentage);
+    if (roundedPercentage > 100) return 100;
+    else if (roundedPercentage < 0) return 0;
+    else return roundedPercentage;
+  };
   return (
     <div data-testid="circular-progress">
       <CircularProgressbar
@@ -34,7 +32,7 @@ const CircularProgress = ({ percentage = 0 }) => {
 };
 
 CircularProgress.propTypes = {
-  percentage: PropTypes.number
-}
+  percentage: PropTypes.number,
+};
 
 export default CircularProgress;

@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import { usePopper } from "react-popper";
 import { useHotkeys } from "react-hotkeys-hook";
 
-import { DownMinimalArrow } from '../assets/icons';
+import { DownMinimalArrow } from "../assets/icons";
 import Button from "./Button";
 
-import {useOnClickOutside} from "../utils/useOnClickOutside";
+import { useOnClickOutside } from "../utils/useOnClickOutside";
 
 const noop = () => {};
 const DROPDOWN_BTN_STYLES = {
@@ -96,7 +96,6 @@ const Dropdown = ({
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   closeOnEsc && useHotkeys("esc", onPopupClose);
-
 
   if (!isControlled) {
     buttonProps = {

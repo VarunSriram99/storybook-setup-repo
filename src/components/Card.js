@@ -4,9 +4,9 @@ import classnames from "classnames";
 import { NavLink } from "react-router-dom";
 
 import Typography from "./Typography";
-import { RightArrow } from '../assets/icons';
+import { RightArrow } from "../assets/icons";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const noop = () => {};
 
@@ -35,7 +35,7 @@ const Item = ({
   to,
   ...otherProps
 }) => {
-  const Parent = props =>
+  const Parent = (props) =>
     to ? (
       <NavLink to={to} {...props}>
         {props.children}
@@ -103,7 +103,6 @@ Card.propTypes = {
   className: PropTypes.string,
 };
 
-
 Card.Item = Item;
 
 Item.propTypes = {
@@ -124,8 +123,8 @@ Item.propTypes = {
    */
   footerLabelRight: PropTypes.string,
   /**
-  * Specifies the function that should execute when card is clicked
-  */
+   * Specifies the function that should execute when card is clicked
+   */
   onClick: PropTypes.func,
   /**
    * Specifies whether current card is active or not

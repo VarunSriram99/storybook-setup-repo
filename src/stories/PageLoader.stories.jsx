@@ -26,16 +26,16 @@ BasicUsage.args = {};
 
 export const LoadingText = () => {
   return (
-    <div className="w-full" style={{height: "calc(100vh/3)"}}>
+    <div className="w-full" style={{ height: "calc(100vh/3)" }}>
       <PageLoader text="Loading..." />
     </div>
   );
 };
 
 export const LoadingWithColor = () => {
-    return (
-      <div className="w-full" style={{height: "calc(100vh/3)"}}>
-        <PageLoader text="Loading..." color="blue" />
-      </div>
-    );
-  };
+  return (
+    <div className="w-full" style={{ height: "calc(100vh/3)" }}>
+      <PageLoader text="Loading..." color="blue" />
+    </div>
+  );
+};

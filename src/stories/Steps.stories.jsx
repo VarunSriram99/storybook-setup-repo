@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Steps from '../components/Steps';
+import Steps from "../components/Steps";
 
 export default {
-  title: 'Components/Steps',
+  title: "Components/Steps",
   component: Steps,
   parameters: {
     layout: "padded",
@@ -19,7 +19,7 @@ const Template = (args) => <Steps {...args} />;
 
 export const StepsPrimary = Template.bind({});
 StepsPrimary.args = {
-  steps: ["Step 1", "Step 2"]
+  steps: ["Step 1", "Step 2"],
 };
 
 export const StepsSecondary = Template.bind({});
@@ -33,4 +33,3 @@ StepsWithDifferentStates.args = {
   steps: ["Step 1", "Step 2", "Step 3"],
   currentStep: 2,
 };
-

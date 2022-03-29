@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Switch from '../components/Switch';
+import Switch from "../components/Switch";
 
 export default {
-  title: 'Components/Switch',
+  title: "Components/Switch",
   component: Switch,
   parameters: {
     layout: "padded",
@@ -19,18 +19,18 @@ const Template = (args) => <Switch {...args} />;
 
 export const SwitchPrimary = Template.bind({});
 SwitchPrimary.args = {
-  label: "Switch"
+  label: "Switch",
 };
 
 export const SwitchWithError = Template.bind({});
 SwitchWithError.args = {
-    label: "Switch",
-    error: "Error",
-    required: true,
+  label: "Switch",
+  error: "Error",
+  required: true,
 };
 
 export const SwitchDisabled = Template.bind({});
 SwitchDisabled.args = {
-    label: "Switch",
-    disabled: true,
+  label: "Switch",
+  disabled: true,
 };

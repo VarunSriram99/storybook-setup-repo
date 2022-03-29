@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import SubHeader from '../components/SubHeader';
-import Button from '../components/Button'
+import SubHeader from "../components/SubHeader";
+import Button from "../components/Button";
 
 export default {
-  title: 'Components/SubHeader',
+  title: "Components/SubHeader",
   component: SubHeader,
   parameters: {
     layout: "padded",
@@ -17,15 +17,28 @@ export default {
   },
 };
 
-const Template = (args) => <BrowserRouter><SubHeader {...args} /></BrowserRouter>;
+const Template = (args) => (
+  <BrowserRouter>
+    <SubHeader {...args} />
+  </BrowserRouter>
+);
 
 export const SubHeaderBreadcrumbs = Template.bind({});
 SubHeaderBreadcrumbs.args = {
-  breadcrumbs: [{link: '//', label: "First crumb"}, {link: '//', label: "Second crumb"}, {link: '//', label: "Last crumb"}]
+  breadcrumbs: [
+    { link: "//", label: "First crumb" },
+    { link: "//", label: "Second crumb" },
+    { link: "//", label: "Last crumb" },
+  ],
 };
 
 export const SubHeaderWithActionBlock = Template.bind({});
 SubHeaderWithActionBlock.args = {
-    breadcrumbs: [{link: '/firstcrumb', label: "First crumb"}, {link: '/secondcrumb', label: "Second crumb"}, {link: '/thirdcrumb', label: "Third crumb"}, {link: '/fourthcrumb', label: "Last crumb"}],
-    actionBlock: <Button label="Action Block" />
+  breadcrumbs: [
+    { link: "/firstcrumb", label: "First crumb" },
+    { link: "/secondcrumb", label: "Second crumb" },
+    { link: "/thirdcrumb", label: "Third crumb" },
+    { link: "/fourthcrumb", label: "Last crumb" },
+  ],
+  actionBlock: <Button label="Action Block" />,
 };

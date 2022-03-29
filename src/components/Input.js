@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
-import { Success, Error } from '../assets/icons';
+import { Success, Error } from "../assets/icons";
 
 import Label from "./Label";
 import Typography from "./Typography";
@@ -34,7 +34,7 @@ const Input = React.forwardRef((props, ref) => {
     setValue(props.value);
   }, [props.value]);
 
-  const onChange = props.onChange || (e => setValue(e.target.value));
+  const onChange = props.onChange || ((e) => setValue(e.target.value));
 
   const id = useId(props.id);
   const errorId = `error_${id}`;

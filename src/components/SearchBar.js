@@ -3,7 +3,7 @@ import React from "react";
 import Input from "./Input";
 import classnames from "classnames";
 import PropTypes from "prop-types";
-import { Search } from '../assets/icons';
+import { Search } from "../assets/icons";
 
 const STYLES = { primary: "primary", secondary: "secondary" };
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Tooltip from '../components/Tooltip';
+import Tooltip from "../components/Tooltip";
 
 export default {
-  title: 'Components/Tooltip',
+  title: "Components/Tooltip",
   component: Tooltip,
   parameters: {
     layout: "padded",
@@ -15,9 +15,13 @@ export default {
   },
 };
 
-const Template = (args) => <div><Tooltip {...args} >This a message with a tooltip</Tooltip></div>;
+const Template = (args) => (
+  <div>
+    <Tooltip {...args}>This a message with a tooltip</Tooltip>
+  </div>
+);
 
 export const TooltipStory = Template.bind({});
 TooltipStory.args = {
-    content: "Tooltip"
+  content: "Tooltip",
 };

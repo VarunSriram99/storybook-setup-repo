@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import classnames from "classnames";
-import { Home, RightMinimalArrow } from '../assets/icons';
+import { Home, RightMinimalArrow } from "../assets/icons";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -18,27 +18,29 @@ const SubHeader = ({ breadcrumbs, actionBlock, className }) => {
       <div>
         <div className="cs-ui-sub-header__navigation">
           <Home size={16} className="cs-ui-sub-header__navigation__icon" />
-          {breadcrumbs.slice(0, breadcrumbs.length - 1).map((breadcrumb, idx) => (
-            <Link
-              to={breadcrumb.link}
-              key={idx}
-              className="cs-ui-sub-header__navigation__link"
-            >
-              <Typography
-                style="h5"
-                component="h5"
-                className="cs-ui-sub-header__navigation__link__text"
+          {breadcrumbs
+            .slice(0, breadcrumbs.length - 1)
+            .map((breadcrumb, idx) => (
+              <Link
+                to={breadcrumb.link}
+                key={idx}
+                className="cs-ui-sub-header__navigation__link"
               >
-                {breadcrumb.label}
-                {idx + 1 !== breadcrumbs.length && (
-                  <RightMinimalArrow
-                    size={16}
-                    className="cs-ui-sub-header__navigation__icon"
-                  />
-                )}
-              </Typography>
-            </Link>
-          ))}
+                <Typography
+                  style="h5"
+                  component="h5"
+                  className="cs-ui-sub-header__navigation__link__text"
+                >
+                  {breadcrumb.label}
+                  {idx + 1 !== breadcrumbs.length && (
+                    <RightMinimalArrow
+                      size={16}
+                      className="cs-ui-sub-header__navigation__icon"
+                    />
+                  )}
+                </Typography>
+              </Link>
+            ))}
         </div>
         <Typography
           style="h3"

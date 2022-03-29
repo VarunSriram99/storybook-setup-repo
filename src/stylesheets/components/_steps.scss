@@ -5,62 +5,62 @@
 }
 
 .cs-ui-steps__step {
- display: flex;
- flex-wrap: nowrap;
- flex-direction: row;
- align-items: center;
- gap: 0.5rem;
- border-bottom: 0.45rem solid $cs-ui-primary;
- color: $cs-ui-primary;
- padding-bottom: 0.75rem;
- font-size: $cs-ui-text-base;
- text-transform: capitalize;
- font-weight: $cs-ui-font-semibold;
- overflow: hidden;
- font-size: $cs-ui-text-sm;
- text-overflow: ellipsis;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 0.45rem solid $cs-ui-primary;
+  color: $cs-ui-primary;
+  padding-bottom: 0.75rem;
+  font-size: $cs-ui-text-base;
+  text-transform: capitalize;
+  font-weight: $cs-ui-font-semibold;
+  overflow: hidden;
+  font-size: $cs-ui-text-sm;
+  text-overflow: ellipsis;
 
- &--secondary {
-  gap: 0.25rem;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  font-size: $cs-ui-text-xs;
- }
+  &--secondary {
+    gap: 0.25rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: $cs-ui-text-xs;
+  }
 
- &--current {
-  border-bottom-color: $cs-ui-primary-light;
- }
+  &--current {
+    border-bottom-color: $cs-ui-primary-light;
+  }
 
- &--incomplete {
-  border-bottom-color: $cs-ui-shade-light;
-  color: $cs-ui-shade-dark;
- }
+  &--incomplete {
+    border-bottom-color: $cs-ui-shade-light;
+    color: $cs-ui-shade-dark;
+  }
 }
 
 .cs-ui-steps__step__number-box {
-    border-radius: $cs-ui-rounded-full;
-    background-color: $cs-ui-primary;
-    color: $cs-ui-shade-empty;
-    font-weight: $cs-ui-font-extrabold;
-    height: 0;
-    width: 0;
-    font-size: $cs-ui-text-sm;
-    padding: max(min(1.2rem, 7.5%),0.8rem);
+  border-radius: $cs-ui-rounded-full;
+  background-color: $cs-ui-primary;
+  color: $cs-ui-shade-empty;
+  font-weight: $cs-ui-font-extrabold;
+  height: 0;
+  width: 0;
+  font-size: $cs-ui-text-sm;
+  padding: max(min(1.2rem, 7.5%), 0.8rem);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &--secondary {
-      padding: max(min(1rem, 5%),0.6rem);
-      font-size: $cs-ui-text-xs;
-    }
+  &--secondary {
+    padding: max(min(1rem, 5%), 0.6rem);
+    font-size: $cs-ui-text-xs;
+  }
 
-    &--incomplete {
-      background-color: $cs-ui-shade-light;
-      color: $cs-ui-shade-dark;
-    }
+  &--incomplete {
+    background-color: $cs-ui-shade-light;
+    color: $cs-ui-shade-dark;
+  }
 }
 
 .cs-ui-steps__step__title {

@@ -73,7 +73,7 @@ const Sidebar = ({
   const Logo = organizationInfo?.logo;
   const LogoSVG = Logo;
   const toggleCollapse =
-    onCollapse || (() => setCollapsed(collapsed => !collapsed));
+    onCollapse || (() => setCollapsed((collapsed) => !collapsed));
 
   const { icon: ChangelogIcon, ...otherChangelogProps } = changelogProps;
   const ChangelogIconSVG = ChangelogIcon || Star;

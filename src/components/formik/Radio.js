@@ -11,7 +11,7 @@ const RadioGroup = ({ label, name, className = "", ...props }) => {
       className={className}
       error={meta.touched && meta.error}
       touched={meta.touched}
-      onChange={event => setFieldValue(name, event.target.value)}
+      onChange={(event) => setFieldValue(name, event.target.value)}
       {...field}
       {...props}
     />

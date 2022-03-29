@@ -44,7 +44,10 @@ export const Panes = () => {
         </Pane.Header>
         <Pane.Body>
           <Typography style="regular" className="mt-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem mollitia laborum cumque doloremque error ipsam ut, rem doloribus sunt beatae vel est esse voluptates, iusto nobis odit iste neque. Veniam.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem mollitia laborum cumque doloremque error ipsam ut,
+            rem doloribus sunt beatae vel est esse voluptates, iusto nobis odit
+            iste neque. Veniam.
           </Typography>
         </Pane.Body>
         <Pane.Footer className="flex items-center space-x-2">

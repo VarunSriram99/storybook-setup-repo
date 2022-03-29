@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import InformationGovernorCard from '../components/InformationGovernorCard';
+import InformationGovernorCard from "../components/InformationGovernorCard";
 
 export default {
-  title: 'Components/Information Governor Card',
+  title: "Components/Information Governor Card",
   component: InformationGovernorCard,
   parameters: {
     layout: "padded",
     docs: {
       description: {
-        component: '`import { InformationGovernorCard } from "clearsense-ui/components";`',
+        component:
+          '`import { InformationGovernorCard } from "clearsense-ui/components";`',
       },
     },
   },
@@ -29,4 +30,3 @@ InformationGovernorCardWithoutImageUrl.args = {
   name: "Sam Smith",
   email: "sam@example.com",
 };
-

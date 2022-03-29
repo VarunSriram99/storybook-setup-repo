@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { Close } from '../assets/icons';
+import { Close } from "../assets/icons";
 
 import findContrast from "../utils/findContrast";
 
@@ -47,7 +47,10 @@ const Tag = ({
       {label}
 
       {onClose && (
-        <span onClick={disabled ? ()=>{} : onClose} className="cs-ui-tag__close">
+        <span
+          onClick={disabled ? () => {} : onClose}
+          className="cs-ui-tag__close"
+        >
           <Close />
         </span>
       )}
@@ -60,7 +63,7 @@ Tag.defaultProps = {
   size: sizes.small,
   label: "",
   color: "#fff",
-  onClose: ()=>{},
+  onClose: () => {},
   disabled: false,
   className: "",
 };

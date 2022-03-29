@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {RightMinimalArrow} from '../assets/icons'
+import { RightMinimalArrow } from "../assets/icons";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 import PropTypes from "prop-types";
@@ -83,7 +83,7 @@ export const Item = ({
         className={classnames("cs-ui-accordion__item", {
           "cs-ui-accordion__item--open": isOpen,
         })}
-        onKeyDown={e => {
+        onKeyDown={(e) => {
           switch (e.key) {
             case " ":
             case "Enter":

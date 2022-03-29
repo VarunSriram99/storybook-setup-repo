@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import CircularProgress from '../components/CircularProgress';
+import CircularProgress from "../components/CircularProgress";
 
 export default {
-  title: 'Components/CircularProgress',
+  title: "Components/CircularProgress",
   component: CircularProgress,
   parameters: {
     layout: "padded",
     docs: {
       description: {
-        component: '`import { CircularProgress } from "clearsense-ui/components";`',
+        component:
+          '`import { CircularProgress } from "clearsense-ui/components";`',
       },
     },
   },

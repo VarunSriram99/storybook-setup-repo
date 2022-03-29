@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useId } from "@reach/auto-id";
 import hyphenize from "../utils/hyphenize";
 import Label from "./Label";
-import { Check, Close, Error } from '../assets/icons';
+import { Check, Close, Error } from "../assets/icons";
 
 const Switch = ({
   label = "",
@@ -32,7 +32,7 @@ const Switch = ({
         >
           <input
             type="checkbox"
-            onChange={e => {
+            onChange={(e) => {
               onChange(e);
               setIsChecked(e.target.checked);
             }}

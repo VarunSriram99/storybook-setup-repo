@@ -10,11 +10,10 @@
   color: $cs-ui-shade-medium !important;
   gap: 0.25rem;
 
-  &--highlight{
+  &--highlight {
     font-weight: $cs-ui-font-bold !important;
     color: $cs-ui-shade-full !important;
   }
-
 }
 
 .cs-ui-pagination__right {
@@ -33,7 +32,7 @@
     color: $cs-ui-shade-full !important;
   }
 
-  .select{
+  .select {
     width: 4rem;
   }
 }

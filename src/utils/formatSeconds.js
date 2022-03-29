@@ -1,4 +1,4 @@
-const formatSeconds = seconds => {
+const formatSeconds = (seconds) => {
   if (isNaN(seconds)) {
     return "00:00";
   }

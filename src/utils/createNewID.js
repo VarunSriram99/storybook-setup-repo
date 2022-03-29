@@ -1,3 +1,3 @@
-const createNewID = i => `new/${new Date().toISOString()}/${i}`;
+const createNewID = (i) => `new/${new Date().toISOString()}/${i}`;
 
 export default createNewID;
